@@ -34,11 +34,73 @@
       </nav>
     </header>
 
-    <main class="form-main">
-      <h1 class="form__title">Подбор программы</h1>
-      <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <main class="programm-main">
+      <h1 class="programm__title">Подбор программы</h1>
+      <p class="programm__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
+      <form class="programm__form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="programm__cat-date">
+          <legend class="visually-hidden">Данные кота</legend>
 
+          <label class="cat-date__label" for="name-cat">Имя:*</label>
+          <input class="cat-date__input" type="text" id="name-cat">
+
+          <label class="cat-date__label" for="weight-cat">Вес (кг):*</label>
+          <input class="cat-date__input" type="text" id="weight-cat">
+
+          <label class="cat-date__label" for="age-cat">Возраст (лет):*</label>
+          <input class="cat-date__input" type="text" id="age-cat">
+        </fieldset>
+
+        <fieldset class="programm__type">
+          <legend class="visually-hidden"></legend>
+
+          <input class="programm-type__radio" type="radio" id="slim">
+          <label class="programm-type__label" for="slim">похудение</label>
+
+          <input class="programm-type__radio" type="radio" id="pro">
+          <label class="programm-type__label" for="pro">набор массы</label>
+
+          <input class="programm-type__radio" type="radio" id="help">
+          <label class="programm-type__label" for="help">не знаю (нужен ваш совет)</label>
+        </fieldset>
+
+        <fieldset class="programm__contacts">
+          <legend class="form__field-title contacts__title">Контактные данные (владельца кота)</legend>
+
+          <label class="contacts__label" for="email">E-mail:*</label>
+          <input class="contacts__input" type="email" id="email">
+
+          <label class="contacts__label" for="phone">Телефон:*</label>
+          <input class="contacts__input" type="text" id="phone">
+        </fieldset>
+
+        <fieldset class="programm__comments">
+          <legend class="form__field-title comments__title"></legend>
+
+          <textarea name="comments-area" id="comments-area" cols="34" rows="4"></textarea>
+        </fieldset>
+
+        <fieldset class="programm__additional">
+          <legend class="form__field-title additional__title">Дополнительно</legend>
+
+          <input class="additional__input" type="checkbox" id="sweetener">
+          <label class="additional__label" for="sweetener">сахарозаменитель</label>
+
+          <input class="additional__input" type="checkbox" id="water">
+          <label class="additional__label" for="water">питьевая вода</label>
+
+          <input class="additional__input" type="checkbox" id="milk">
+          <label class="additional__label" for="milk">молоко</label>
+
+          <input class="additional__input" type="checkbox" id="vitamins">
+          <label class="additional__label" for="vitamins">витамины</label>
+        </fieldset>
+
+        <button class="programm__button button programm__button--mobile">отправить заявку</button>
+
+        <p class="programm__note">* — Обязательные поля</p>
+      </form>
 
       <aside class="invite-dealers">
         <h2 class="invite__title">приглашаем к сотрудничеству дилеров!</h2>
