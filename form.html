@@ -8,11 +8,11 @@
 
   <body class="page-body">
     <header class="page-header">
-      <nav class="site-navigation">
-        <a class="site-logo logo-image--mobile" href="#">
+      <nav class="navigation">
+        <a class="navigation__logo navigation__logo--mobile" href="#">
           <img src="image/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
         </a>
-        <a class="logo-secondary" href="#">
+        <a class="navigation__logo-secondary" href="#">
           <img src="image/logo-2.svg" alt="Надпись Cat Energy." width="101" height="18">
         </a>
 
@@ -39,61 +39,66 @@
       <p class="programm__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
       <form class="programm__form" action="https://echo.htmlacademy.ru/" method="post">
+        <!--данные кота-->
         <fieldset class="programm__cat-date">
           <legend class="visually-hidden">Данные кота</legend>
 
           <label class="cat-date__label" for="name-cat">Имя:*</label>
-          <input class="cat-date__input" type="text" id="name-cat">
+          <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
 
           <label class="cat-date__label" for="weight-cat">Вес (кг):*</label>
-          <input class="cat-date__input" type="text" id="weight-cat">
+          <input class="cat-date__input" type="number" id="weight-cat" name="weight-cat" placeholder="7" required>
 
           <label class="cat-date__label" for="age-cat">Возраст (лет):*</label>
-          <input class="cat-date__input" type="text" id="age-cat">
+          <input class="cat-date__input" type="number" id="age-cat" name="age-cat" placeholder="7">
         </fieldset>
 
+        <!--тип программы-->
         <fieldset class="programm__type">
           <legend class="visually-hidden"></legend>
 
-          <input class="programm-type__radio" type="radio" id="slim">
+          <input class="programm-type__radio" type="radio" id="slim" name="programm-type" value="slim" checked>
           <label class="programm-type__label" for="slim">похудение</label>
 
-          <input class="programm-type__radio" type="radio" id="pro">
+          <input class="programm-type__radio" type="radio" id="pro" name="programm-type" value="pro">
           <label class="programm-type__label" for="pro">набор массы</label>
 
-          <input class="programm-type__radio" type="radio" id="help">
+          <input class="programm-type__radio" type="radio" id="help" name="programm-type" value="help">
           <label class="programm-type__label" for="help">не знаю (нужен ваш совет)</label>
         </fieldset>
 
+        <!--контакты-->
         <fieldset class="programm__contacts">
           <legend class="form__field-title contacts__title">Контактные данные (владельца кота)</legend>
 
           <label class="contacts__label" for="email">E-mail:*</label>
-          <input class="contacts__input" type="email" id="email">
+          <input class="contacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
 
           <label class="contacts__label" for="phone">Телефон:*</label>
-          <input class="contacts__input" type="text" id="phone">
+          <input class="contacts__input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
         </fieldset>
 
+        <!--комментарий-->
         <fieldset class="programm__comments">
           <legend class="form__field-title comments__title"></legend>
 
-          <textarea name="comments-area" id="comments-area" cols="34" rows="4"></textarea>
+          <textarea name="comments-area" id="comments-area" name="comments" cols="34" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
+        <!--дополнительно-->
         <fieldset class="programm__additional">
           <legend class="form__field-title additional__title">Дополнительно</legend>
 
-          <input class="additional__input" type="checkbox" id="sweetener">
+          <input class="additional__input" type="checkbox" id="sweetener" name="sweetener" checked>
           <label class="additional__label" for="sweetener">сахарозаменитель</label>
 
-          <input class="additional__input" type="checkbox" id="water">
+          <input class="additional__input" type="checkbox" id="water" name="water">
           <label class="additional__label" for="water">питьевая вода</label>
 
-          <input class="additional__input" type="checkbox" id="milk">
+          <input class="additional__input" type="checkbox" id="milk" name="milk">
           <label class="additional__label" for="milk">молоко</label>
 
-          <input class="additional__input" type="checkbox" id="vitamins">
+          <input class="additional__input" type="checkbox" id="vitamins" name="vitamins">
           <label class="additional__label" for="vitamins">витамины</label>
         </fieldset>
 
@@ -105,7 +110,7 @@
       <aside class="invite-dealers">
         <h2 class="invite__title">приглашаем к сотрудничеству дилеров!</h2>
         <address class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        <img class="invite__location-image" src="image/location-mobile.png" alt="Карта расположения компании Cat Energy.">
+        <img class="invite__location-image" src="image/location-mobile.png" alt="Карта расположения компании Cat Energy." width="320" height="362">
       </aside>
     </main>
 
