@@ -34,14 +34,14 @@
       </nav>
     </header>
 
-    <main class="programm-main">
-      <h1 class="programm__title">Подбор программы</h1>
-      <p class="programm__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <main class="form-main">
+      <h1 class="form-main__title">Подбор программы</h1>
+      <p class="form-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-      <form class="programm__form" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="programm" action="https://echo.htmlacademy.ru/" method="post">
         <!--данные кота-->
         <fieldset class="programm__cat-date">
-          <legend class="visually-hidden">Данные кота</legend>
+          <legend class="visually-hidden cat-date__title">Данные кота</legend>
 
           <label class="cat-date__label" for="name-cat">Имя:*</label>
           <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
@@ -54,8 +54,8 @@
         </fieldset>
 
         <!--тип программы-->
-        <fieldset class="programm__type">
-          <legend class="visually-hidden"></legend>
+        <fieldset class="programm__programm-type">
+          <legend class="visually-hidden programm-type__title">Тип программы</legend>
 
           <input class="programm-type__radio" type="radio" id="slim" name="programm-type" value="slim" checked>
           <label class="programm-type__label" for="slim">похудение</label>
@@ -69,7 +69,7 @@
 
         <!--контакты-->
         <fieldset class="programm__contacts">
-          <legend class="form__field-title contacts__title">Контактные данные (владельца кота)</legend>
+          <legend class="contacts__title">Контактные данные (владельца кота)</legend>
 
           <label class="contacts__label" for="email">E-mail:*</label>
           <input class="contacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -80,14 +80,14 @@
 
         <!--комментарий-->
         <fieldset class="programm__comments">
-          <legend class="form__field-title comments__title"></legend>
+          <legend class="comments__title">Комментарий</legend>
 
-          <textarea name="comments-area" id="comments-area" cols="34" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="comments__textarea" name="comments" id="comments" cols="34" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <!--дополнительно-->
         <fieldset class="programm__additional">
-          <legend class="form__field-title additional__title">Дополнительно</legend>
+          <legend class="additional__title">Дополнительно</legend>
 
           <input class="additional__input" type="checkbox" id="sweetener" name="sweetener" checked>
           <label class="additional__label" for="sweetener">сахарозаменитель</label>
@@ -107,7 +107,7 @@
         <p class="programm__note">* — Обязательные поля</p>
       </form>
 
-      <aside class="invite-dealers">
+      <aside class="invite">
         <h2 class="invite__title">приглашаем к сотрудничеству дилеров!</h2>
         <address class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         <img class="invite__location-image" src="image/location-mobile.png" alt="Карта расположения компании Cat Energy." width="320" height="362">
@@ -117,29 +117,29 @@
     <!--подвал сайта-->
     <footer class="page-footer">
 
-      <a class="footer__logo footer__logo--mobile" href="#">
+      <a class="page-footer__logo page-footer__logo--mobile" href="#">
         <img src="image/footer-logo.svg" alt="Логотип Cat Energy." width="124" height="24">
       </a>
 
-      <ul class="footer-social__list footer-social__list--mobile">
-        <li class="footer-social__item footer-social__item--mobile">
-          <a class="footer-social__link" href="">
+      <ul class="page-footer__social-list page-footer__social-list--mobile">
+        <li class="page-footer__social-item page-footer__social-item--mobile">
+          <a class="page-footer__social-link" href="">
             <span class="visually-hidden">вконтакте</span>
           </a>
         </li>
-        <li class="footer-social__item footer-social__item--mobile">
-          <a class="footer-social__link" href="">
+        <li class="page-footer__social-item page-footer__social-item--mobile">
+          <a class="page-footer__social--link" href="">
             <span class="visually-hidden">youtube</span>
           </a>
         </li>
-        <li class="footer-social__item footer-social__item--mobile">
-          <a class="footer-social__link" href="">
+        <li class="page-footer__social-item pafe-footer__social-item--mobile">
+          <a class="page-footer__social-link" href="">
             <span class="visually-hidden">телеграмм</span>
           </a>
         </li>
       </ul>
 
-      <a class="footer__producer footer__producer--mobile" href="">HTML Academy</a>
+      <a class="page-footer__producer page-footer__producer--mobile" href="">HTML Academy</a>
 
     </footer>
 
