@@ -34,21 +34,28 @@
 
     <main class="form-main">
       <h1 class="form-main__title">Подбор программы</h1>
-      <p class="form-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="form-main__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
 
       <form class="form-main__programm programm" action="https://echo.htmlacademy.ru/" method="post">
         <!--данные кота-->
         <fieldset class="programm__cat-date cat-date">
           <legend class="visually-hidden cat-date__title">Данные кота</legend>
 
-          <label class="cat-date__label" for="name-cat">Имя:*</label>
-          <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
+          <label class="cat-date__label" for="name-cat">
+            <span class="cat-date__parameter">Имя:*</span>
+            <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
+          </label>
 
-          <label class="cat-date__label" for="weight-cat">Вес (кг):*</label>
-          <input class="cat-date__input" type="number" id="weight-cat" name="weight-cat" placeholder="7" required>
+          <label class="cat-date__label" for="weight-cat">
+            <span class="cat-date__parameter">Вес (кг):*</span>
+            <input class="cat-date__input" type="number" id="weight-cat" name="weight-cat" placeholder="7" required>
+          </label>
 
-          <label class="cat-date__label" for="age-cat">Возраст (лет):*</label>
-          <input class="cat-date__input" type="number" id="age-cat" name="age-cat" placeholder="7">
+          <label class="cat-date__label" for="age-cat">
+            <span class="cat-date__parameter">Возраст (лет):</span>
+            <input class="cat-date__input" type="number" id="age-cat" name="age-cat" placeholder="7">
+          </label>
+
         </fieldset>
 
         <!--тип программы-->
