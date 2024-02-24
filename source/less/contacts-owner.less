@@ -1,11 +1,21 @@
-.cat-date {
+.contacts-owner {
+  display: grid;
   margin: 0;
-  padding: 0 20px 24px 20px;
+  padding: 26px 20px 24px 20px;
   border: none;
-  border-bottom: 1px solid @divider;
 }
 
-.cat-date__list {
+.contacts-owner__title {
+  float: left;
+  margin: 0 0 35px 0;
+  padding: 0;
+  font-family: @title;
+  font-size: 24px;
+  line-height: 26px;
+  color: @titular;
+}
+
+.contacts-owner__list {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -14,12 +24,12 @@
   list-style-type: none;
 }
 
-.cat-date__label {
+.contacts-owner__label {
   display: flex;
   align-items: center;
 }
 
-.cat-date__parameter {
+.contacts-owner__type {
   margin-right: 13px;
   font-family: @title;
   font-size: 16px;
@@ -29,7 +39,7 @@
   color: @textual;
 }
 
-.cat-date__input {
+.contacts-owner__input {
   flex-grow: 1;
   padding: 14px 15px 13px 15px;
   border: 1px solid @input-border;
