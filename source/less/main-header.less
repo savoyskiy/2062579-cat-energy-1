@@ -1,5 +1,8 @@
 .main-header {
+  display: flex;
+  flex-direction: column;
   padding: 0 20px;
+  min-height: 480px;
   background-image: url("../img/index-background-cat-green.jpg");
   background-repeat: no-repeat;
 }
@@ -22,6 +25,10 @@
   line-height: 14px;
   text-transform: uppercase;
   color: @back;
+}
+
+.main-header__image {
+  margin-bottom: 3px;
 }
 
 .main-header__button {
