@@ -4,16 +4,17 @@
     <meta charset="utf-8">
     <title>HTML Academy: Cat Energy</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page-body">
     <header class="page-header">
       <nav class="page-header__navigation navigation">
         <a class="navigation__logo" href="#">
-          <img src="img/logo-mobile-group.svg" alt="Логотип Cat Energy." width="190" height="38">
+          <img class="navigation__img" src="img/logo-mobile-group.svg" alt="Логотип Cat Energy." width="190" height="38">
         </a>
 
-        <ul class="navigation__list">
+        <ul class="navigation__list navigation__list--hidden">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">главная</a>
           </li>
@@ -33,81 +34,113 @@
 
     <main class="form-main">
       <h1 class="form-main__title">Подбор программы</h1>
-      <p class="form-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="form-main__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
 
       <form class="form-main__programm programm" action="https://echo.htmlacademy.ru/" method="post">
         <!--данные кота-->
         <fieldset class="programm__cat-date cat-date">
           <legend class="visually-hidden cat-date__title">Данные кота</legend>
-
-          <label class="cat-date__label" for="name-cat">Имя:*</label>
-          <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
-
-          <label class="cat-date__label" for="weight-cat">Вес (кг):*</label>
-          <input class="cat-date__input" type="number" id="weight-cat" name="weight-cat" placeholder="7" required>
-
-          <label class="cat-date__label" for="age-cat">Возраст (лет):*</label>
-          <input class="cat-date__input" type="number" id="age-cat" name="age-cat" placeholder="7">
+          <ul class="cat-date__list">
+            <li class="cat-date__item">
+              <label class="cat-date__label" for="name-cat">
+                <span class="cat-date__parameter">Имя:*</span>
+                <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
+              </label>
+            </li>
+            <li class="cat-date__item">
+              <label class="cat-date__label" for="weight-cat">
+                <span class="cat-date__parameter">Вес (кг):*</span>
+                <input class="cat-date__input" type="number" id="weight-cat" name="weight-cat" placeholder="7" required>
+              </label>
+            </li>
+            <li class="cat-date__item">
+              <label class="cat-date__label" for="age-cat">
+                <span class="cat-date__parameter">Возраст (лет):</span>
+                <input class="cat-date__input" type="number" id="age-cat" name="age-cat" placeholder="7">
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
         <!--тип программы-->
         <fieldset class="programm__programm-type programm-type">
           <legend class="visually-hidden programm-type__title">Тип программы</legend>
-
-          <input class="programm-type__radio" type="radio" id="slim" name="programm-type" value="slim" checked>
-          <label class="programm-type__label" for="slim">похудение</label>
-
-          <input class="programm-type__radio" type="radio" id="pro" name="programm-type" value="pro">
-          <label class="programm-type__label" for="pro">набор массы</label>
-
-          <input class="programm-type__radio" type="radio" id="help" name="programm-type" value="help">
-          <label class="programm-type__label" for="help">не знаю (нужен ваш совет)</label>
+          <ul class="programm-type__list">
+            <li class="programm-type__item">
+              <input class="programm-type__radio" type="radio" id="slim" name="programm-type" value="slim" checked>
+              <label class="programm-type__label" for="slim">похудение</label>
+            </li>
+            <li class="programm-type__item">
+              <input class="programm-type__radio" type="radio" id="pro" name="programm-type" value="pro">
+              <label class="programm-type__label" for="pro">набор массы</label>
+            </li>
+            <li class="programm-type__item">
+              <input class="programm-type__radio" type="radio" id="help" name="programm-type" value="help">
+              <label class="programm-type__label" for="help">не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
         </fieldset>
 
         <!--контакты-->
-        <fieldset class="programm__contacts contacts">
-          <legend class="contacts__title">Контактные данные (владельца кота)</legend>
-
-          <label class="contacts__label" for="email">E-mail:*</label>
-          <input class="contacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-
-          <label class="contacts__label" for="phone">Телефон:*</label>
-          <input class="contacts__input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+        <fieldset class="programm__contacts-owner contacts-owner">
+          <legend class="contacts-owner__title">Контактные данные (владельца кота)</legend>
+          <ul class="contacts-owner__list">
+            <li class="contacts-owner__item">
+              <label class="contacts-owner__label" for="email">
+                <span class="contacts-owner__type">E-mail:*</span>
+                <input class="contacts-owner__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </label>
+            </li>
+            <li class="contacts-owner__item">
+              <label class="contacts-owner__label" for="phone">
+                <span class="contacts-owner__type">Телефон:*</span>
+                <input class="contacts-owner__input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
         <!--комментарий-->
         <fieldset class="programm__comments comments">
           <legend class="comments__title">Комментарий</legend>
 
-          <textarea class="comments__textarea" name="comments" id="comments" cols="34" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="comments__textarea" name="comments" id="comments" cols="25" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <!--дополнительно-->
         <fieldset class="programm__additional additional">
           <legend class="additional__title">Дополнительно</legend>
-
-          <input class="additional__input" type="checkbox" id="sweetener" name="sweetener" checked>
-          <label class="additional__label" for="sweetener">сахарозаменитель</label>
-
-          <input class="additional__input" type="checkbox" id="water" name="water">
-          <label class="additional__label" for="water">питьевая вода</label>
-
-          <input class="additional__input" type="checkbox" id="milk" name="milk">
-          <label class="additional__label" for="milk">молоко</label>
-
-          <input class="additional__input" type="checkbox" id="vitamins" name="vitamins">
-          <label class="additional__label" for="vitamins">витамины</label>
+          <ul class="additional__list">
+            <li class="additional__item">
+              <input class="additional__input" type="checkbox" id="sweetener" name="sweetener" checked>
+              <label class="additional__label" for="sweetener">сахарозаменитель</label>
+            </li>
+            <li class="additional__item">
+              <input class="additional__input" type="checkbox" id="water" name="water">
+              <label class="additional__label" for="water">питьевая вода</label>
+            </li>
+            <li class="additional__item">
+              <input class="additional__input" type="checkbox" id="milk" name="milk">
+              <label class="additional__label" for="milk">молоко</label>
+            </li>
+            <li class="additional__item">
+              <input class="additional__input" type="checkbox" id="vitamins" name="vitamins">
+              <label class="additional__label" for="vitamins">витамины</label>
+            </li>
+          </ul>
         </fieldset>
 
-        <button class="programm__button button">отправить заявку</button>
+        <div class="programm__button-wrapper">
+          <button class="programm__button button">отправить заявку</button>
+        </div>
 
         <p class="programm__note">* — Обязательные поля</p>
       </form>
 
-      <aside class="catalog-main__invite invite">
+      <aside class="form-main__invite invite">
         <h2 class="invite__title">приглашаем к сотрудничеству дилеров!</h2>
         <address class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        <iframe title="Карта расположения компании Cat Energy." frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8600.904867167967!2d30.310846219801366!3d59.94008662313794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1707726178806!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="invite__map" title="Карта расположения компании Cat Energy." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8600.904867167967!2d30.310846219801366!3d59.94008662313794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1707726178806!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </aside>
     </main>
 
