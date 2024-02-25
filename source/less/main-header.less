@@ -1,15 +1,21 @@
 .main-header {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0;
   min-height: 480px;
+}
+
+.main-header__title-wrapper {
+  background-color: @elementary;
   background-image: url("../img/index-background-cat-green.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .main-header__title {
   margin: 0;
-  padding: 27px 15px 25px 15px;
+  padding: 27px 35px 25px 35px;
   font-family: @title;
   font-size: 36px;
   line-height: 36px;
@@ -19,7 +25,7 @@
 
 .main-header__slogan {
   margin: 0;
-  padding: 0 40px 29px 40px;
+  padding: 0 60px 164px 60px;
   font-family: @title;
   font-size: 14px;
   line-height: 14px;
@@ -28,17 +34,16 @@
 }
 
 .main-header__image {
-  margin-bottom: 3px;
+  margin: -135px 0 3px 0;
+  padding: 0 20px;
+}
+
+.main-header__button-wrapper {
+  padding: 0 20px;
 }
 
 .main-header__button {
   width: 100%;
-  padding: 10px 0;
-  border: none;
-  font-family: @title;
-  font-size: 16px;
-  line-height: 20px;
   color: @back;
-  text-transform: uppercase;
   background-color: @elementary;
 }
