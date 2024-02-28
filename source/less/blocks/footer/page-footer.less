@@ -31,3 +31,21 @@
   color: @textual;
   text-decoration: none;
 }
+
+/*планшетный вид*/
+@media (min-width: 768px) and (max-width: 1439px) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 30px;
+  }
+
+  .page-footer__logo,
+  .page-footer__social-list {
+    padding: 0;
+  }
+
+  .page-footer__producer {
+    padding: 0 50px 0 5px;
+  }
+}

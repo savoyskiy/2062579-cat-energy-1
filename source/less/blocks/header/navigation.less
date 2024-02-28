@@ -44,3 +44,39 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+
+/*планшетный вид*/
+@media (min-width: 768px) and (max-width: 1439px) {
+  .navigation__img {
+    width: 174px;
+    height: 50px;
+  }
+
+  .navigation__list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 436px;
+    gap: 33px;
+
+    &--hidden {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .navigation__item {
+    min-height: none;
+    border-bottom: none;
+  }
+
+  .navigation__link {
+    padding: 14px 0 15px 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .navigation__button {
+    display: none;
+  }
+}

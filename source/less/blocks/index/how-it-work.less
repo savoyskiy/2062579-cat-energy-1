@@ -28,3 +28,24 @@
   line-height: 18px;
   color: @textual;
 }
+
+/*планшетный вид*/
+@media (min-width: 768px) and (max-width: 1439px) {
+  .how-it-work__title {
+    padding: 45px 30px 32px 30px;
+  }
+
+  .how-it-work__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 37px;
+    column-gap: 60px;
+    padding: 0 105px 47px 30px;
+  }
+
+  .how-it-work__item {
+    padding-left: 0;
+    padding-top: 151px;
+  }
+}

@@ -1,13 +1,17 @@
 .invite {
   display: grid;
-  grid-template-columns: 50% 50%;
   grid-template-rows: min-content min-content;
 }
 
+.invite__description {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 26px 20px;
+}
+
 .invite__title {
-  width: 140px;
   margin: 0;
-  padding: 26px 0 26px 20px;
+  padding: 0;
   font-family: @title;
   font-size: 16px;
   line-height: 20px;
@@ -17,8 +21,7 @@
 }
 
 .invite__address {
-  width: 140px;
-  padding: 26px 20px 26px 0;
+  padding: 0;
   font-family: @text;
   font-size: 14px;
   line-height: 20px;
@@ -36,4 +39,30 @@
 
 .form-main__invite {
   background-color: @back-grey;
+}
+
+/*планшетный вид*/
+@media (min-width: 768px) and (max-width: 1439px) {
+  .invite__description {
+    padding: 60px 70px;
+  }
+
+  .invite__title {
+    max-width: 163px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .invite__address {
+    max-width: 157px;
+    font-size: 16px;
+    line-height: 20px;
+    justify-self: right;
+    text-align: right;
+  }
+
+  .invite__map {
+    width: 768px;
+    height: 400px;
+  }
 }
