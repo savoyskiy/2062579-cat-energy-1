@@ -10,10 +10,37 @@
 
 .programm__note {
   margin: 0;
-  padding: 21px 20px 32px 20px;
+  padding: 21px 0 32px 0;
   text-align: center;
   font-family: @text;
   font-size: 14px;
   line-height: 16px;
   color: @titular;
+}
+
+/*планшетный вид*/
+@media (min-width: 768px) and (max-width: 1439px) {
+  .programm {
+    padding-bottom: 60px;
+  }
+
+  .programm__button-wrapper {
+    display: flex;
+    padding: 0 70px;
+  }
+
+  .programm__button {
+    align-self: center;
+    margin-right: 60px;
+    width: 284px;
+    padding: 14px 65px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .programm__note {
+    padding: 17px 0 21px 0;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }

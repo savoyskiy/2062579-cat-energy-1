@@ -51,3 +51,32 @@
   text-transform: uppercase;
   color: @textual;
 }
+
+/*планшетный вид*/
+@media (min-width: 768px) and (max-width: 1439px) {
+  .contacts-owner {
+    padding: 0 30px 65px 30px;
+  }
+
+  .contacts-owner__title {
+    margin: 0;
+    padding: 0 40px 76px 40px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .contacts-owner__list {
+    padding: 0 40px;
+    gap: 20px;
+  }
+
+  .contacts-owner__type {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contacts-owner__input {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

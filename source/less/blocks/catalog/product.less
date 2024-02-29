@@ -65,16 +65,59 @@
   background-color: @elementary;
 }
 
+/*планшетный вид*/
 @media (min-width: 768px) and (max-width: 1439px) {
   .product__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 60px;
+    padding: 0 30px;
     border-bottom: none;
   }
 
   .product__item {
+    align-items: end;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto min-content min-content 32px min-content;
+    padding: 0 0 40px 0;
     border-bottom: none;
+    background-color: @back-grey;
+  }
+
+  .product__link {
+    grid-row: ~"1 / 2";
+  }
+
+  .product__title {
+    justify-self: center;
+    text-align: center;
+    width: 135px;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .product__description-list {
+    padding: 0 37px;
+  }
+
+  .description-list__term {
+    padding: 8px 0 4px 0;
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid @divider--dark;
+  }
+
+  .description-list__definition {
+    padding: 8px 0 4px 0;
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid @divider--dark;
+  }
+
+  .product__button {
+    grid-row: ~"5 / -1";
+    margin: 0 37px;
   }
 }
