@@ -5,7 +5,7 @@
 
 .invite__description {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   padding: 26px 20px;
 }
 
@@ -42,7 +42,7 @@
 }
 
 /*планшетный вид*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .invite__description {
     padding: 60px 70px;
   }
@@ -63,6 +63,35 @@
 
   .invite__map {
     width: 768px;
+    height: 400px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: 1440px) {
+  .invite {
+    position: relative;
+    grid-template-rows: min-content;
+    grid-template-columns: auto;
+  }
+
+  .invite__description {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    gap: 87px;
+    padding: 60px 80px;
+    background-color: @back;
+  }
+
+  .invite__address {
+    text-align: left;
+  }
+
+  .invite__map {
+    grid-row: ~"1 / -1";
+    grid-column: ~"1 / -1";
+    width: 1440px;
     height: 400px;
   }
 }

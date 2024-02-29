@@ -33,7 +33,7 @@
 }
 
 /*планшетный вид*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .page-footer {
     flex-direction: row;
     justify-content: space-between;
@@ -48,5 +48,12 @@
 
   .page-footer__producer {
     padding: 0 50px 0 5px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: 1440px) {
+  .page-footer {
+    padding: 66px 110px;
   }
 }
