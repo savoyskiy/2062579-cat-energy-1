@@ -45,7 +45,58 @@
 }
 
 .main-header__button {
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   color: @back;
   background-color: @elementary;
+}
+
+/*планшетный вид*/
+@media (min-width: 768px) and (max-width: 1439px) {
+  .main-header {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: auto;
+  }
+
+  .main-header__title-wrapper {
+    background: none;
+  }
+
+  .main-header__title {
+    padding: 40px 200px 40px 120px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: @titular;
+  }
+
+  .main-header__slogan {
+    padding: 0 200px 21px 120px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @titular;
+  }
+
+  .main-header__image {
+    grid-row: ~"2 / 3";
+    grid-column: ~"1 / -1";
+    margin: 0;
+    padding: 0 30px;
+    width: 708px;
+    height: 609px;
+  }
+
+  .main-header__button-wrapper {
+    grid-row: ~"2 / 3";
+    grid-column: ~"1 / -1";
+  }
+
+  .main-header__button {
+    min-width: 244px;
+    padding: 14px 26px;
+    margin: 29px 90px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

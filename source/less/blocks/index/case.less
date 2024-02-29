@@ -62,5 +62,47 @@
 
 /*планшетный вид*/
 @media (min-width: 768px) and (max-width: 1439px) {
+  .case {
+    padding: 45px 30px 101px 30px;
+    background-color: @back;
+  }
 
+  .case__preslider-wrapper {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content min-content min-content min-content;
+  }
+
+  .case__title {
+    grid-column: ~"1 / -1";
+    margin: 0 0 60px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .case__description {
+    grid-column: ~"1 / -1";
+    margin: 0 0 55px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .case__term {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .case__definition {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .case__costs {
+    justify-self: right;
+    max-width: 174px;
+    padding: 11px 0 0 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
 }
