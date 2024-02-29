@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  border-bottom: 1px solid @divider--light;
 }
 
 .product__item {
@@ -62,4 +63,18 @@
   grid-row: ~"4 / -1";
   color: @back;
   background-color: @elementary;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .product__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 60px;
+    border-bottom: none;
+  }
+
+  .product__item {
+    border-bottom: none;
+  }
 }
