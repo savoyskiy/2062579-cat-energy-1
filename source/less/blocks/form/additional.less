@@ -58,3 +58,16 @@
     line-height: 30px;
   }
 }
+
+/*десктопный вид*/
+@media (min-width: 1440px) {
+  .additional {
+    grid-column: ~"1 / -1";
+    padding: 0 110px 60px 110px;
+  }
+
+  .additional__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+  }
+}

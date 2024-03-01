@@ -44,3 +44,31 @@
     line-height: 16px;
   }
 }
+
+/*десктопный вид*/
+@media (min-width: 1440px) {
+  .programm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content min-content min-content;
+    column-gap: 80px;
+    padding-bottom: 79px;
+  }
+
+  .programm__button-wrapper {
+    grid-column: ~"1 / -1";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding: 0 110px;
+  }
+
+  .programm__button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .programm__note {
+    justify-self: left;
+  }
+}

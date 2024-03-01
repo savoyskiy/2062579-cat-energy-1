@@ -66,7 +66,7 @@
 }
 
 /*планшетный вид*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .goods {
     margin-bottom: 75px;
     padding: 0 30px;
@@ -110,5 +110,45 @@
   .goods__button {
     grid-column: ~"1 / -1";
     font-size: 18px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: 1440px) {
+  .goods {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: auto 245px;
+    column-gap: 80px;
+    padding: 0 110px;
+    margin-bottom: 87px;
+  }
+
+  .goods__heading {
+    grid-column: ~"1 / -1";
+    padding: 76px 0 80px 0;
+  }
+
+  .goods__item {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+    column-gap: 40px;
+    padding: 16px 0;
+  }
+
+  .goods__title {
+    padding: 0;
+  }
+
+  .goods__description-list {
+    padding: 0;
+  }
+
+  .goods-description__term {
+    justify-self: auto;
+  }
+
+  .goods__button {
+    grid-column: ~"3 / -1";
   }
 }
