@@ -30,7 +30,7 @@
 }
 
 /*планшетный вид*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: @tablet) {
   .how-it-work__title {
     padding: 45px 30px 32px 30px;
     font-size: 60px;
@@ -49,5 +49,19 @@
   .how-it-work__item {
     padding-left: 0;
     padding-top: 151px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .how-it-work__title {
+    padding: 71px 110px 32px 110px;
+  }
+
+  .how-it-work__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+    column-gap: 80px;
+    padding: 0 110px 69px 110px;
   }
 }

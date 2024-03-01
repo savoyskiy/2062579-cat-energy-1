@@ -52,7 +52,7 @@
 }
 
 /*планшетный вид*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: @tablet) {
   .main-header {
     display: grid;
     grid-template-rows: min-content min-content;
@@ -98,5 +98,45 @@
     margin: 29px 90px;
     font-size: 20px;
     line-height: 26px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .main-header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: min-content min-content;
+  }
+
+  .main-header__title {
+    padding: 85px 190px 40px 190px;
+  }
+
+  .main-header__slogan {
+    padding: 0 0 52px 190px;
+  }
+
+  .main-header__image-wrapper {
+    grid-row: ~"1 / -1";
+    grid-column: ~"2 / 3";
+    padding: 0 110px 0 0;
+    background-color: @elementary;
+    background-image: url("../../../img/index-desctop-cat-green.jpg");
+  }
+
+  .main-header__image {
+    padding: 0;
+    width: 552px;
+    height: 499px;
+  }
+
+  .main-header__button-wrapper {
+    grid-column: ~"1 / 2";
+    padding: 0 0 266px 190px;
+  }
+
+  .main-header__button {
+    margin: 0;
   }
 }

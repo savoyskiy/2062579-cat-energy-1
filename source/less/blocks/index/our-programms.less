@@ -47,7 +47,7 @@
 }
 
 /*планшетный вид*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: @tablet) {
   .our-programms__list {
     gap: 30px;
     padding: 0 30px;
@@ -73,6 +73,28 @@
   .our-programms__link {
     padding: 0;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .our-programms__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding: 82px 110px 0 110px;
+  }
+
+  .our-programms__item {
+    padding: 77px 61px 55px 52px;
+  }
+
+  .our-programms__title {
+    padding: 0 0 73px 214px;
+  }
+
+  .our-programms__description {
+    padding: 0 0 23px 0;
   }
 }

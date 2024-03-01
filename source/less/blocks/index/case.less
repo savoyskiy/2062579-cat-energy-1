@@ -5,7 +5,8 @@
 }
 
 .case__title {
-  margin: 0 0 40px 0;
+  margin: 0;
+  padding: 0 0 40px 0;
   font-family: @title;
   font-size: 36px;
   line-height: 40px;
@@ -14,7 +15,8 @@
 }
 
 .case__description {
-  margin: 0 0 20px 0;
+  margin: 0;
+  padding: 0 0 20px 0;
   font-family: @text;
   font-size: 14px;
   line-height: 18px;
@@ -61,7 +63,7 @@
 }
 
 /*планшетный вид*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: @tablet) {
   .case {
     padding: 45px 30px 101px 30px;
     background-color: @back;
@@ -75,14 +77,14 @@
 
   .case__title {
     grid-column: ~"1 / -1";
-    margin: 0 0 60px 0;
+    padding: 0 0 60px 0;
     font-size: 60px;
     line-height: 60px;
   }
 
   .case__description {
     grid-column: ~"1 / -1";
-    margin: 0 0 55px 0;
+    padding: 0 0 55px 0;
     font-size: 16px;
     line-height: 24px;
   }
@@ -104,5 +106,33 @@
     font-size: 20px;
     line-height: 20px;
     text-align: right;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .case {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 110px 0 110px;
+  }
+
+  .case__preslider-wrapper {
+    grid-template-columns: 436px;
+    grid-template-rows: min-content min-content min-content min-content;
+  }
+
+  .case__title {
+    padding: 0 0 57px 0;
+  }
+
+  .case__description {
+    padding: 70px 0 69px 0;
+  }
+
+  .case__costs {
+    justify-self: left;
+    max-width: 327px;
+    padding: 55px 0 75px 0;
   }
 }
