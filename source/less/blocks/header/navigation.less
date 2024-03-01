@@ -56,12 +56,13 @@
     position: relative;
     top: 0;
     left: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 436px;
-    gap: 33px;
+    column-gap: 33px;
 
     &--hidden {
       display: flex;
-      flex-direction: row;
     }
   }
 
@@ -99,18 +100,25 @@
   }
 
   .navigation__list {
+    flex-wrap: wrap;
     width: 478px;
     padding: 55px 110px 25px 132px;
-    background-color: @elementary;
-    background-image: url("../../../img/index-desctop-cat-green--menu.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
+
+    &--index {
+      background-color: @elementary;
+      background-image: url("../../../img/index-desctop-cat-green--menu.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
   }
 
   .navigation__link {
     padding: 16px 0 13px 0;
     font-size: 20px;
     line-height: 30px;
-    color: @back;
+
+    &--index {
+      color: @back;
+    }
   }
 }

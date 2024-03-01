@@ -31,6 +31,8 @@
 
 .invite__map {
   border: none;
+  width: 320px;
+  min-height: 362px;
 }
 
 .catalog-main__invite {
@@ -63,22 +65,25 @@
 
   .invite__map {
     width: 768px;
-    height: 400px;
+    min-height: 400px;
   }
 }
 
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .invite {
-    position: relative;
     grid-template-rows: min-content;
     grid-template-columns: auto;
   }
 
   .invite__description {
-    position: absolute;
-    top: 95px;
-    left: 110px;
+    grid-row: ~"1 / -1";
+    grid-column: ~"1 / -1";
+    z-index: 1;
+    align-self: start;
+    margin: 95px 0 105px 110px;
+    width: 413px;
+    min-height: 78px;
     gap: 87px;
     padding: 60px 80px;
     background-color: @back;
@@ -91,7 +96,8 @@
   .invite__map {
     grid-row: ~"1 / -1";
     grid-column: ~"1 / -1";
+    align-self: stretch;
     width: 1440px;
-    height: 400px;
+    min-height: 400px;
   }
 }
