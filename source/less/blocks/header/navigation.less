@@ -30,7 +30,7 @@
 .navigation__item {
   display: flex;
   justify-content: center;
-  min-height: 65px;
+  //min-height: 65px; /*вспомнить, что это и зачем было, потом убрать*/
   border-bottom: 1px solid @divider--light;
 }
 
@@ -83,6 +83,16 @@
 
 /*десктопный вид*/
 @media (min-width: @desktop) {
+  .navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navigation__logo {
+    display: block;
+    padding: 55px 0 25px 110px;
+  }
+
   .navigation__img {
     width: 202px;
     height: 59px;
@@ -90,11 +100,17 @@
 
   .navigation__list {
     width: 478px;
+    padding: 55px 110px 25px 132px;
+    background-color: @elementary;
+    background-image: url("../../../img/index-desctop-cat-green--menu.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 
   .navigation__link {
     padding: 16px 0 13px 0;
     font-size: 20px;
     line-height: 30px;
+    color: @back;
   }
 }
