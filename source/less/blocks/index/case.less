@@ -65,20 +65,23 @@
 /*планшетный вид*/
 @media (min-width: @tablet) {
   .case {
-    padding: 45px 30px 101px 30px;
+    padding: 0 0 101px 0;
   }
 
-  .case__preslider-wrapper {
+  .case__info {
     display: grid;
     grid-template-columns: min-content auto;
     grid-template-rows: min-content min-content min-content min-content;
+    padding: 0 30px;
+    background-color: @back;
   }
 
   .case__title {
     grid-column: ~"1 / -1";
-    padding: 0 0 60px 0;
+    padding: 45px 30px 60px 30px;
     font-size: 60px;
     line-height: 60px;
+    background-color: @back;
   }
 
   .case__description {
@@ -106,23 +109,32 @@
     line-height: 20px;
     text-align: right;
   }
+
+  .case__slider {
+    padding: 0 30px;
+  }
 }
 
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .case {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 110px 0 110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    padding: 0;
   }
 
-  .case__preslider-wrapper {
+  .case__info {
     grid-template-columns: 436px;
     grid-template-rows: min-content min-content min-content min-content;
+    padding-left: 110px;
+    background-color: @back-grey--dark;
   }
 
   .case__title {
-    padding: 0 0 57px 0;
+    grid-column: ~"1 / -1";
+    padding: 0 110px 57px 110px;
+    background-color: @back;
   }
 
   .case__description {
