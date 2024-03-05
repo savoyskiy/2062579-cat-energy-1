@@ -1,4 +1,4 @@
-.invite {
+.invite__container {
   display: grid;
   grid-template-rows: min-content min-content;
 }
@@ -72,8 +72,13 @@
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .invite {
+    background-color: @back-grey;
+  }
+
+  .invite__container {
     grid-template-rows: min-content;
     grid-template-columns: auto;
+    justify-content: center;
   }
 
   .invite__description {

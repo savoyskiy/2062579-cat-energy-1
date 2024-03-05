@@ -1,8 +1,13 @@
 .page-footer {
+  width: 100%;
+  background-color: @back-grey;
+}
+
+.page-footer__container {
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: @back-grey;
 }
 
 .page-footer__logo {
@@ -36,6 +41,11 @@
 /*планшетный вид*/
 @media (min-width: @tablet) {
   .page-footer {
+    padding: 0;
+  }
+
+  .page-footer__container {
+    width: 768px;
     flex-direction: row;
     justify-content: space-between;
     padding: 55px 30px;
@@ -55,6 +65,11 @@
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .page-footer {
-    padding: 66px 110px;
+    padding: 0;
+  }
+
+  .page-footer__container {
+    width: 1220px;
+    padding: 66px 0;
   }
 }

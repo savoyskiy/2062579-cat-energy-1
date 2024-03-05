@@ -79,11 +79,15 @@
 
 /*десктопный вид*/
 @media (min-width: @desktop) {
+  .our-programms__container {
+    width: 1220px;
+  }
+
   .our-programms__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    padding: 82px 110px 0 110px;
+    padding: 82px 0 0 0;
   }
 
   .our-programms__item {

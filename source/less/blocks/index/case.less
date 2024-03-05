@@ -125,9 +125,10 @@
   }
 
   .case__info {
+    justify-self: right;
     grid-template-columns: 436px;
     grid-template-rows: min-content min-content min-content min-content;
-    padding-left: 110px;
+    padding: 0 174px 0 110px;
     background-color: @back-grey--dark;
   }
 
@@ -135,6 +136,11 @@
     grid-column: ~"1 / -1";
     padding: 0 110px 57px 110px;
     background-color: @back;
+  }
+
+  .case-title__container {
+    display: block;
+    width: 1220px;
   }
 
   .case__description {
