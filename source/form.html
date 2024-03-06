@@ -36,119 +36,122 @@
     </header>
 
     <main class="form-main">
-      <h1 class="form-main__title">Подбор программы</h1>
-      <p class="form-main__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+      <div class="form-main__container container">
+        <h1 class="form-main__title">Подбор программы</h1>
+        <p class="form-main__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
 
-      <form class="form-main__programm programm" action="https://echo.htmlacademy.ru/" method="post">
-        <!--данные кота-->
-        <fieldset class="programm__cat-date cat-date">
-          <legend class="visually-hidden cat-date__title">Данные кота</legend>
-          <ul class="cat-date__list">
-            <li class="cat-date__item">
-              <label class="cat-date__label" for="name-cat">
-                <span class="cat-date__parameter">Имя:*</span>
-                <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
-              </label>
-            </li>
-            <li class="cat-date__item">
-              <label class="cat-date__label" for="weight-cat">
-                <span class="cat-date__parameter">Вес (кг):*</span>
-                <input class="cat-date__input" type="number" id="weight-cat" name="weight-cat" placeholder="7" required>
-              </label>
-            </li>
-            <li class="cat-date__item">
-              <label class="cat-date__label" for="age-cat">
-                <span class="cat-date__parameter">Возраст (лет):</span>
-                <input class="cat-date__input" type="number" id="age-cat" name="age-cat" placeholder="7">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+        <form class="form-main__programm programm" action="https://echo.htmlacademy.ru/" method="post">
+          <!--данные кота-->
+          <fieldset class="programm__cat-date cat-date">
+            <legend class="visually-hidden cat-date__title">Данные кота</legend>
+            <ul class="cat-date__list">
+              <li class="cat-date__item">
+                <label class="cat-date__label" for="name-cat">
+                  <span class="cat-date__parameter">Имя:*</span>
+                  <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
+                </label>
+              </li>
+              <li class="cat-date__item">
+                <label class="cat-date__label" for="weight-cat">
+                  <span class="cat-date__parameter">Вес (кг):*</span>
+                  <input class="cat-date__input" type="number" id="weight-cat" name="weight-cat" placeholder="7" required>
+                </label>
+              </li>
+              <li class="cat-date__item">
+                <label class="cat-date__label" for="age-cat">
+                  <span class="cat-date__parameter">Возраст (лет):</span>
+                  <input class="cat-date__input" type="number" id="age-cat" name="age-cat" placeholder="7">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <!--тип программы-->
-        <fieldset class="programm__programm-type programm-type">
-          <legend class="visually-hidden programm-type__title">Тип программы</legend>
-          <ul class="programm-type__list">
-            <li class="programm-type__item">
-              <input class="programm-type__radio" type="radio" id="slim" name="programm-type" value="slim" checked>
-              <label class="programm-type__label" for="slim">похудение</label>
-            </li>
-            <li class="programm-type__item">
-              <input class="programm-type__radio" type="radio" id="pro" name="programm-type" value="pro">
-              <label class="programm-type__label" for="pro">набор массы</label>
-            </li>
-            <li class="programm-type__item">
-              <input class="programm-type__radio" type="radio" id="help" name="programm-type" value="help">
-              <label class="programm-type__label" for="help">не знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+          <!--тип программы-->
+          <fieldset class="programm__programm-type programm-type">
+            <legend class="visually-hidden programm-type__title">Тип программы</legend>
+            <ul class="programm-type__list">
+              <li class="programm-type__item">
+                <input class="programm-type__radio" type="radio" id="slim" name="programm-type" value="slim" checked>
+                <label class="programm-type__label" for="slim">похудение</label>
+              </li>
+              <li class="programm-type__item">
+                <input class="programm-type__radio" type="radio" id="pro" name="programm-type" value="pro">
+                <label class="programm-type__label" for="pro">набор массы</label>
+              </li>
+              <li class="programm-type__item">
+                <input class="programm-type__radio" type="radio" id="help" name="programm-type" value="help">
+                <label class="programm-type__label" for="help">не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <!--контакты владельца-->
-        <fieldset class="programm__contacts-owner contacts-owner">
-          <legend class="contacts-owner__title">Контактные данные (владельца кота)</legend>
-          <ul class="contacts-owner__list">
-            <li class="contacts-owner__item">
-              <label class="contacts-owner__label" for="email">
-                <span class="contacts-owner__type">E-mail:*</span>
-                <input class="contacts-owner__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-              </label>
-            </li>
-            <li class="contacts-owner__item">
-              <label class="contacts-owner__label" for="phone">
-                <span class="contacts-owner__type">Телефон:*</span>
-                <input class="contacts-owner__input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+          <!--контакты владельца-->
+          <fieldset class="programm__contacts-owner contacts-owner">
+            <legend class="contacts-owner__title">Контактные данные (владельца кота)</legend>
+            <ul class="contacts-owner__list">
+              <li class="contacts-owner__item">
+                <label class="contacts-owner__label" for="email">
+                  <span class="contacts-owner__type">E-mail:*</span>
+                  <input class="contacts-owner__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                </label>
+              </li>
+              <li class="contacts-owner__item">
+                <label class="contacts-owner__label" for="phone">
+                  <span class="contacts-owner__type">Телефон:*</span>
+                  <input class="contacts-owner__input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <!--комментарий-->
-        <fieldset class="programm__comments comments">
-          <legend class="comments__title">Комментарий</legend>
+          <!--комментарий-->
+          <fieldset class="programm__comments comments">
+            <legend class="comments__title">Комментарий</legend>
 
-          <textarea class="comments__textarea" name="comments" id="comments" cols="25" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
+            <textarea class="comments__textarea" name="comments" id="comments" cols="25" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
 
-        <!--дополнительно-->
-        <fieldset class="programm__additional additional">
-          <legend class="additional__title">Дополнительно</legend>
-          <ul class="additional__list">
-            <li class="additional__item">
-              <input class="additional__input" type="checkbox" id="sweetener" name="sweetener" checked>
-              <label class="additional__label" for="sweetener">сахарозаменитель</label>
-            </li>
-            <li class="additional__item">
-              <input class="additional__input" type="checkbox" id="water" name="water">
-              <label class="additional__label" for="water">питьевая вода</label>
-            </li>
-            <li class="additional__item">
-              <input class="additional__input" type="checkbox" id="milk" name="milk">
-              <label class="additional__label" for="milk">молоко</label>
-            </li>
-            <li class="additional__item">
-              <input class="additional__input" type="checkbox" id="vitamins" name="vitamins">
-              <label class="additional__label" for="vitamins">витамины</label>
-            </li>
-          </ul>
-        </fieldset>
+          <!--дополнительно-->
+          <fieldset class="programm__additional additional">
+            <legend class="additional__title">Дополнительно</legend>
+            <ul class="additional__list">
+              <li class="additional__item">
+                <input class="additional__input" type="checkbox" id="sweetener" name="sweetener" checked>
+                <label class="additional__label" for="sweetener">сахарозаменитель</label>
+              </li>
+              <li class="additional__item">
+                <input class="additional__input" type="checkbox" id="water" name="water">
+                <label class="additional__label" for="water">питьевая вода</label>
+              </li>
+              <li class="additional__item">
+                <input class="additional__input" type="checkbox" id="milk" name="milk">
+                <label class="additional__label" for="milk">молоко</label>
+              </li>
+              <li class="additional__item">
+                <input class="additional__input" type="checkbox" id="vitamins" name="vitamins">
+                <label class="additional__label" for="vitamins">витамины</label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <div class="programm__button-wrapper">
-          <button class="programm__button button">отправить заявку</button>
-          <p class="programm__note">* — Обязательные поля</p>
-        </div>
-
-      </form>
-
-      <aside class="form-main__invite invite">
-        <div class="invite__container container">
-          <div class="invite__description">
-            <h2 class="invite__title">приглашаем к сотрудничеству дилеров!</h2>
-            <address class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <div class="programm__button-wrapper">
+            <button class="programm__button button">отправить заявку</button>
+            <p class="programm__note">* — Обязательные поля</p>
           </div>
-          <iframe class="invite__map" title="Карта расположения компании Cat Energy." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8600.904867167967!2d30.310846219801366!3d59.94008662313794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1707726178806!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </aside>
+
+        </form>
+
+        <aside class="form-main__invite invite">
+          <div class="invite__container container">
+            <div class="invite__description">
+              <h2 class="invite__title">приглашаем к сотрудничеству дилеров!</h2>
+              <address class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            </div>
+            <iframe class="invite__map" title="Карта расположения компании Cat Energy." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8600.904867167967!2d30.310846219801366!3d59.94008662313794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1707726178806!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </aside>
+      </div>
+
     </main>
 
     <!--подвал сайта-->
