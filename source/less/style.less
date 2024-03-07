@@ -1,37 +1,42 @@
-/*общие переменные*/
+/*общие переменные и стили*/
 @import "fonts.less";
+@import "variables.less";
 @import "colors.less";
 @import "commons.less";
-@import "button.less";
-@import "variables.less";
 
-/*общие стили*/
-@import "page.less";
-@import "page-body.less";
-@import "page-header.less";
-@import "navigation.less";
-@import "invite.less";
-@import "page-footer.less";
+/*общие блоки*/
+@import "blocks/page.less";
+@import "blocks/page-body.less";
+@import "blocks/invite.less";
+@import "blocks/button.less";
+@import "container.less";
+
+/*хедер*/
+@import "blocks/header/page-header.less";
+@import "blocks/header/navigation.less";
+
+/*футер*/
+@import "blocks/footer/page-footer.less";
 
 /*стили главной страницы*/
-@import "main-header.less";
-@import "index-main.less";
-@import "our-programms.less";
-@import "how-it-work.less";
-@import "case.less";
+@import "blocks/index/main-header.less";
+@import "blocks/index/index-main.less";
+@import "blocks/index/our-programms.less";
+@import "blocks/index/how-it-work.less";
+@import "blocks/index/case.less";
 
 /*стили каталога*/
-@import "catalog-main.less";
-@import "product.less";
-@import "other-products.less";
-@import "goods.less";
-@import "order-gift.less";
+@import "blocks/catalog/catalog-main.less";
+@import "blocks/catalog/product.less";
+@import "blocks/catalog/other-products.less";
+@import "blocks/catalog/goods.less";
+@import "blocks/catalog/order-gift.less";
 
 /*стили формы*/
-@import "programm.less";
-@import "form-main.less";
-@import "cat-date.less";
-@import "programm-type.less";
-@import "contacts-owner.less";
-@import "comments.less";
-@import "additional.less";
+@import "blocks/form/programm.less";
+@import "blocks/form/form-main.less";
+@import "blocks/form/cat-date.less";
+@import "blocks/form/programm-type.less";
+@import "blocks/form/contacts-owner.less";
+@import "blocks/form/comments.less";
+@import "blocks/form/additional.less";

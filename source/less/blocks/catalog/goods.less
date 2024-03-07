@@ -1,0 +1,154 @@
+.goods {
+  margin-bottom: 35px;
+  padding: 0 20px;
+}
+
+.goods__heading {
+  margin: 0;
+  padding: 25px 0 35px 0;
+  font-family: @title;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @titular;
+  border-bottom: 1px solid @divider--dark;
+}
+
+.goods__list {
+  margin: 0 0 35px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.goods__title {
+  margin: 0;
+  padding: 13px 0 13px 0;
+  font-family: @title;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @titular--lighten;
+}
+
+.goods__description-list {
+  margin: 0 0 15px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.goods__item {
+  padding-bottom: 19px;
+  border-bottom: 1px solid @divider--dark;
+}
+
+.goods-description__term {
+  margin: 0;
+  font-family: @text;
+  font-size: 14px;
+  line-height: 14px;
+  color: @textual;
+}
+
+.goods-description__definition {
+  justify-self: right;
+  margin: 0;
+  font-family: @text;
+  font-size: 14px;
+  line-height: 14px;
+  color: @textual;
+}
+
+.goods__button {
+  width: 100%;
+  color: @back;
+  background-color: @elementary;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .goods {
+    margin-bottom: 75px;
+    padding: 0 30px;
+  }
+
+  .goods__heading {
+    padding: 70px 40px 80px 40px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .goods__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    padding-bottom: 28px;
+  }
+
+  .goods__title {
+    padding: 26px 38px 25px 38px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .goods__description-list {
+    margin: 0;
+    padding: 28px 40px 23px 40px;
+  }
+
+  .goods-description__term {
+    justify-self: right;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .goods-description__definition {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .goods__button {
+    grid-column: ~"1 / -1";
+    font-size: 18px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .goods {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: auto 245px;
+    column-gap: 80px;
+    padding: 0;
+    margin-bottom: 87px;
+  }
+
+  .goods__heading {
+    grid-column: ~"1 / -1";
+    padding: 76px 0 80px 0;
+  }
+
+  .goods__item {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+    column-gap: 40px;
+    padding: 16px 0;
+  }
+
+  .goods__title {
+    padding: 0;
+  }
+
+  .goods__description-list {
+    padding: 0;
+  }
+
+  .goods-description__term {
+    justify-self: auto;
+  }
+
+  .goods__button {
+    grid-column: ~"3 / -1";
+  }
+}

@@ -1,0 +1,54 @@
+.form-main {
+  flex-grow: 1;
+}
+
+.form-main__title {
+  margin: 0;
+  padding: 27px 0 37px 20px;
+  font-family: @title;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @titular;
+}
+
+.form-main__description {
+  margin: 0;
+  padding: 0 20px 39px 20px;
+  font-family: @title;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @titular;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .form-main__title {
+    padding: 40px 70px 54px 70px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .form-main__description {
+    padding: 0 70px 66px 70px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .form-main__container {
+    width: 1220px;
+  }
+
+  .form-main__title {
+    padding: 49px 0 55px 0;
+  }
+
+  .form-main__description {
+    padding: 0 0 66px 0;
+  }
+}

@@ -1,0 +1,53 @@
+.programm-type {
+  margin: 0;
+  padding: 22px 20px 19px 20px;
+  border: none;
+  border-bottom: 1px solid @divider;
+}
+
+.programm-type__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.programm-type__label {
+  font-family: @title;
+  font-size: 16;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @textual;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .programm-type {
+    padding: 0 70px 65px 70px;
+    border-bottom: none;
+  }
+
+  .programm-type__list {
+    padding: 23px 27px;
+    border: 1px solid @back-grey;
+  }
+
+  .programm-type__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .programm-type {
+    padding: 0;
+  }
+
+  .programm-type__list {
+    padding: 25px 28px;
+  }
+}

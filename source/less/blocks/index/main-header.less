@@ -1,0 +1,157 @@
+.main-header {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.main-header__title-wrapper {
+  background-color: @elementary;
+  background-image: url("../img/index-background-cat-green.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-header__title {
+  margin: 0;
+  padding: 27px 35px 25px 35px;
+  font-family: @title;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: @back;
+}
+
+.main-header__slogan {
+  text-align: center;
+  margin: 0;
+  padding: 0 60px 164px 60px;
+  font-family: @title;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @back;
+}
+
+.main-header__image {
+  display: block;
+  margin: -135px auto 3px auto;
+  padding: 0;
+}
+
+.main-header__button-wrapper {
+  padding: 0;
+}
+
+.main-header__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  color: @back;
+  background-color: @elementary;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .main-header {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: auto;
+  }
+
+  .main-header__title-wrapper {
+    background: none;
+  }
+
+  .main-header__title {
+    padding: 40px 200px 40px 120px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: @titular;
+  }
+
+  .main-header__slogan {
+    padding: 0 200px 21px 120px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @titular;
+  }
+
+  .main-header__image {
+    grid-row: ~"2 / 3";
+    display: block;
+    grid-column: ~"1 / -1";
+    margin: 0 auto;
+    padding: 0;
+    width: 708px;
+    height: 609px;
+  }
+
+  .main-header__button-wrapper {
+    grid-row: ~"2 / 3";
+    grid-column: ~"1 / -1";
+  }
+
+  .main-header__button {
+    max-width: 383px;
+    min-width: 244px;
+    padding: 14px 26px;
+    margin: 29px 90px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .main-header {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 82px;
+  }
+
+  .main-header__title-wrapper {
+    width: 610px;
+    justify-self: right;
+  }
+
+  .main-header__title {
+    padding: 85px 110px 40px 80px;
+  }
+
+  .main-header__slogan {
+    padding: 0 110px 52px 80px;
+  }
+
+  .main-header__image-wrapper {
+    grid-row: ~"1 / -1";
+    grid-column: ~"2 / 3";
+    padding: 0 110px 0 0;
+    background-color: @elementary--dark;
+    background-image: url("../img/index-desctop-cat-green--main.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  .main-header__image {
+    margin: 0;
+    padding: 0;
+    width: 552px;
+    height: 499px;
+  }
+
+  .main-header__button-wrapper {
+    justify-self: right;
+    grid-column: ~"1 / 2";
+    width: 420px;
+    padding: 0 110px 184px 80px;
+  }
+
+  .main-header__button {
+    margin: 0;
+  }
+}

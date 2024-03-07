@@ -1,0 +1,155 @@
+.case {
+  margin: 0;
+  padding: 25px 20px 40px 20px;
+  background-color: @back-grey--dark;
+}
+
+.case__title {
+  margin: 0;
+  padding: 0 0 40px 0;
+  font-family: @title;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: @titular;
+}
+
+.case__description {
+  margin: 0;
+  padding: 0 0 20px 0;
+  font-family: @text;
+  font-size: 14px;
+  line-height: 18px;
+  color: @textual;
+}
+
+.case__dates {
+  display: grid;
+  grid-template-columns: 124px 124px;
+  column-gap: 32px;
+  row-gap: 16px;
+  margin: 0;
+}
+
+.case__term {
+  font-family: @text;
+  font-size: 12px;
+  line-height: 12px;
+  color: @textual;
+}
+
+.case__definition {
+  margin: 0;
+  font-family: @title;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @titular;
+}
+
+.case__costs {
+  margin: 0;
+  padding: 20px 46px;
+  font-family: @title;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @titular;
+}
+
+.case__slider {
+  min-height: 256px;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .case {
+    padding: 0 0 101px 0;
+  }
+
+  .case__info {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content min-content min-content min-content;
+    padding: 0 30px;
+    background-color: @back;
+  }
+
+  .case__title {
+    grid-column: ~"1 / -1";
+    padding: 45px 30px 60px 30px;
+    font-size: 60px;
+    line-height: 60px;
+    background-color: @back;
+  }
+
+  .case__description {
+    grid-column: ~"1 / -1";
+    padding: 0 0 55px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .case__term {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .case__definition {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .case__costs {
+    justify-self: right;
+    max-width: 174px;
+    padding: 11px 0 0 0;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .case__slider {
+    padding: 0 30px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .case {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    padding: 0;
+  }
+
+  .case__info {
+    justify-self: right;
+    grid-template-columns: 436px;
+    grid-template-rows: min-content min-content min-content min-content;
+    padding: 0 174px 0 110px;
+    background-color: @back-grey--dark;
+  }
+
+  .case__title {
+    grid-column: ~"1 / -1";
+    padding: 0 110px 57px 110px;
+    background-color: @back;
+  }
+
+  .case-title__container {
+    display: block;
+    width: 1220px;
+  }
+
+  .case__description {
+    padding: 70px 0 69px 0;
+  }
+
+  .case__costs {
+    justify-self: left;
+    max-width: 327px;
+    padding: 55px 0 75px 0;
+  }
+}

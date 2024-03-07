@@ -1,0 +1,74 @@
+.programm__button-wrapper {
+  padding: 0 20px;
+}
+
+.programm__button {
+  width: 100%;
+  color: @back;
+  background-color: @elementary;
+}
+
+.programm__note {
+  margin: 0;
+  padding: 21px 0 32px 0;
+  text-align: center;
+  font-family: @text;
+  font-size: 14px;
+  line-height: 16px;
+  color: @titular;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .programm {
+    padding-bottom: 60px;
+  }
+
+  .programm__button-wrapper {
+    display: flex;
+    padding: 0 70px;
+  }
+
+  .programm__button {
+    align-self: center;
+    margin-right: 60px;
+    width: 284px;
+    padding: 14px 65px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .programm__note {
+    padding: 17px 0 21px 0;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .programm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content min-content min-content;
+    column-gap: 80px;
+    padding-bottom: 79px;
+  }
+
+  .programm__button-wrapper {
+    grid-column: ~"1 / -1";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding: 0;
+  }
+
+  .programm__button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .programm__note {
+    justify-self: left;
+  }
+}

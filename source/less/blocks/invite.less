@@ -1,0 +1,109 @@
+.invite__container {
+  display: grid;
+  grid-template-rows: min-content min-content;
+}
+
+.invite__description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 26px 20px;
+}
+
+.invite__title {
+  margin: 0;
+  padding: 0;
+  font-family: @title;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: @titular--light;
+  text-transform: uppercase;
+}
+
+.invite__address {
+  padding: 0;
+  font-family: @text;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  color: @textual;
+}
+
+.invite__map {
+  border: none;
+  width: 100%;
+  min-height: 362px;
+}
+
+.catalog-main__invite {
+  background-color: @back-grey;
+}
+
+.form-main__invite {
+  background-color: @back-grey;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .invite__description {
+    padding: 60px 70px;
+  }
+
+  .invite__title {
+    max-width: 155px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .invite__address {
+    max-width: 157px;
+    font-size: 16px;
+    line-height: 20px;
+    justify-self: right;
+    text-align: right;
+  }
+
+  .invite__map {
+    width: 100%;
+    min-height: 400px;
+    justify-self: center;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .invite {
+    background-color: @back-grey;
+  }
+
+  .invite__container {
+    grid-template-rows: min-content;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  .invite__description {
+    grid-row: ~"1 / -1";
+    grid-column: ~"1 / -1";
+    z-index: 1;
+    align-self: start;
+    margin: 95px 0 105px 110px;
+    width: 405px;
+    min-height: 78px;
+    gap: 87px;
+    padding: 60px 80px;
+    background-color: @back;
+  }
+
+  .invite__address {
+    text-align: left;
+  }
+
+  .invite__map {
+    grid-row: ~"1 / -1";
+    grid-column: ~"1 / -1";
+    align-self: stretch;
+    width: 1440px;
+    min-height: 400px;
+  }
+}

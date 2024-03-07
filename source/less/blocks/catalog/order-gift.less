@@ -1,0 +1,38 @@
+.order-gift {
+  padding: 187px 60px 43px 60px;
+  background-color: @elementary;
+  background-image: url("../img/bag_cat_green.jpg");
+  background-size: cover;
+}
+
+.order-gift__description {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: @text;
+  font-size: 16px;
+  line-height: 20px;
+  color: @back;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .order-gift {
+    padding: 71px 125px 69px 421px;
+  }
+
+  .order-gift__description {
+    text-align: left;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .order-gift {
+    padding: 185px 42px 43px 42px;
+  }
+
+  .order-gift__description {
+    text-align: center;
+  }
+}

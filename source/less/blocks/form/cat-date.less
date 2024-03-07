@@ -40,3 +40,32 @@
   text-transform: uppercase;
   color: @textual;
 }
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .cat-date {
+    padding: 0 70px 72px 70px;
+    border-bottom: none;
+  }
+
+  .cat-date__list {
+    gap: 20px;
+  }
+
+  .cat-date__parameter {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .cat-date__input {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .cat-date {
+    padding: 0;
+  }
+}

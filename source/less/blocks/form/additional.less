@@ -1,0 +1,73 @@
+.additional {
+  display: grid;
+  margin: 0;
+  padding: 0 20px 34px 20px;
+  border: none;
+}
+
+.additional__title {
+  float: left;
+  margin: 0 0 34px 0;
+  padding: 0;
+  font-family: @title;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  color: @titular;
+}
+
+.additional__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.additional__label {
+  font-family: @title;
+  font-size: 16;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @textual;
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .additional {
+    padding: 0 70px 60px 70px;
+  }
+
+  .additional__title {
+    margin: 0 0 57px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .additional__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    row-gap: 32px;
+  }
+
+  .additional__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .additional {
+    grid-column: ~"1 / -1";
+    padding: 0 0 60px 0;
+  }
+
+  .additional__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+  }
+}
