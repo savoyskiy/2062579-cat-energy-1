@@ -8,6 +8,7 @@
 }
 
 .our-programms__item {
+  position: relative;
   padding: 0 20px;
   background-color: @back-grey;
 }
@@ -21,13 +22,27 @@
   font-weight: 400;
   color: @titular;
   text-transform: uppercase;
+
+  &--slim::before {
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    content: url("../img/cat_slim--mobile.svg");
+  }
+
+  &--pro::before {
+    position: absolute;
+    top: 21px;
+    left: 13px;
+    content: url("../img/cat_pro--mobile.svg");
+  }
 }
 
 .our-programms__description {
   margin: 0;
-  padding: 0 0 23px 0;
+  padding: 0 0 22px 0;
+  min-height: 90px;
   border-bottom: 1px solid @divider;
-  box-sizing: border-box;
   font-family: @text;
   font-size: 14px;
   line-height: 18px;
@@ -35,8 +50,9 @@
 }
 
 .our-programms__link {
+  position: relative;
   display: block;
-  padding: 19px 0 22px 0;
+  padding: 19px 39px 22px 0;
   font-family: @title;
   font-size: 16px;
   line-height: 16px;
@@ -44,6 +60,13 @@
   color: @titular;
   text-transform: uppercase;
   text-decoration: none;
+
+  &::after {
+    position: absolute;
+    top: 18px;
+    left: 100px;
+    content: url("../img/icon_arrow--mobile.svg");
+  }
 }
 
 /*планшетный вид*/
@@ -61,10 +84,28 @@
     padding: 0 0 24px 1px;
     font-size: 36px;
     line-height: 36px;
+
+    &--slim::before {
+      position: absolute;
+      top: 81px;
+      left: auto;
+      right: 63px;
+      content: url("../img/cat_slim--tablet.svg");
+    }
+
+    &--pro::before {
+      position: absolute;
+      top: 81px;
+      left: auto;
+      right: 29px;
+      content: url("../img/cat_pro--tablet.svg");
+    }
   }
 
   .our-programms__description {
+    display: block;
     padding: 0 0 48px 0;
+    min-height: 96px;
     font-size: 16px;
     line-height: 24px;
     border-bottom: none;
@@ -74,6 +115,13 @@
     padding: 0;
     font-size: 20px;
     line-height: 30px;
+
+    &::after {
+      position: absolute;
+      top: -3px;
+      left: 130px;
+      content: url("../img/icon_arrow--mobile.svg");
+    }
   }
 }
 
@@ -95,10 +143,27 @@
   }
 
   .our-programms__title {
-    padding: 0 0 73px 214px;
+    padding: 0 0 73px 162px;
+
+    &--slim::before {
+      position: absolute;
+      top: 41px;
+      right: auto;
+      left: 52px;
+      content: url("../img/cat_slim--desktop.svg");
+    }
+
+    &--pro::before {
+      position: absolute;
+      top: 41px;
+      right: auto;
+      left: 33px;
+      content: url("../img/cat_pro--desktop.svg");
+    }
   }
 
   .our-programms__description {
     padding: 0 0 23px 0;
+    min-height: 72px;
   }
 }

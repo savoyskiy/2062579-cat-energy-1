@@ -18,7 +18,11 @@
 }
 
 .how-it-work__item {
-  padding-left: 80px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 60px auto;
+  align-items: center;
+  gap: 20px;
 }
 
 .how-it-work__text {
@@ -41,12 +45,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    row-gap: 37px;
-    column-gap: 60px;
+    row-gap: 90px;
+    column-gap: 137px;
     padding: 0 105px 47px 30px;
   }
 
   .how-it-work__item {
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto;
     padding-left: 0;
     padding-top: 151px;
   }
