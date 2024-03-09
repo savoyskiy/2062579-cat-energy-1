@@ -71,16 +71,25 @@
             <legend class="visually-hidden programm-type__title">Тип программы</legend>
             <ul class="programm-type__list">
               <li class="programm-type__item">
-                <input class="programm-type__radio" type="radio" id="slim" name="programm-type" value="slim" checked>
-                <label class="programm-type__label" for="slim">похудение</label>
+                <label class="programm-type__label" for="slim">
+                  <input class="programm-type__checkbox visually-hidden" type="radio" id="slim" name="programm-type" value="slim" checked>
+                  <span class="programm-type__radio"></span>
+                  похудение
+                </label>
               </li>
               <li class="programm-type__item">
-                <input class="programm-type__radio" type="radio" id="pro" name="programm-type" value="pro">
-                <label class="programm-type__label" for="pro">набор массы</label>
+                <label class="programm-type__label" for="pro">
+                  <input class="programm-type__checkbox visually-hidden" type="radio" id="pro" name="programm-type" value="pro">
+                  <span class="programm-type__radio"></span>
+                  набор массы
+                </label>
               </li>
               <li class="programm-type__item">
-                <input class="programm-type__radio" type="radio" id="help" name="programm-type" value="help">
-                <label class="programm-type__label" for="help">не знаю (нужен ваш совет)</label>
+                <label class="programm-type__label" for="help">
+                  <input class="programm-type__checkbox visually-hidden" type="radio" id="help" name="programm-type" value="help">
+                  <span class="programm-type__radio"></span>
+                  не знаю (нужен ваш совет)
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -90,13 +99,13 @@
             <legend class="contacts-owner__title">Контактные данные (владельца кота)</legend>
             <ul class="contacts-owner__list">
               <li class="contacts-owner__item">
-                <label class="contacts-owner__label" for="email">
+                <label class="contacts-owner__label contacts-owner__label--email" for="email">
                   <span class="contacts-owner__type">E-mail:*</span>
                   <input class="contacts-owner__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
                 </label>
               </li>
               <li class="contacts-owner__item">
-                <label class="contacts-owner__label" for="phone">
+                <label class="contacts-owner__label contacts-owner__label--phone" for="phone">
                   <span class="contacts-owner__type">Телефон:*</span>
                   <input class="contacts-owner__input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
                 </label>
