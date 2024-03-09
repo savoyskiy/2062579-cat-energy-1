@@ -5,6 +5,7 @@
 }
 
 .other-products__title {
+  position: relative;
   margin: 0;
   padding: 53px 0 8px 0;
   text-align: center;
@@ -14,6 +15,27 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @titular--light;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translate(-50%);
+    background-color: @back-grey--plus;
+  }
+
+  &::before {
+    top: 0;
+    width: 2px;
+    height: 30px;
+  }
+
+  &::after {
+    top: 14px;
+    width: 30px;
+    height: 2px;
+  }
 }
 
 .other-products__description {
@@ -42,6 +64,15 @@
     padding: 110px 68px 23px 68px;
     font-size: 20px;
     line-height: 24px;
+
+    &::before {
+      height: 60px;
+    }
+
+    &::after {
+      top: 29px;
+      width: 60px;
+    }
   }
 
   .other-products__description {
