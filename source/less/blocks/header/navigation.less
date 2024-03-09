@@ -5,10 +5,14 @@
   padding: 0;
 }
 
+.navigation__logo-wrapper {
+  border-bottom: 1px solid @divider--light;
+}
+
 .navigation__logo {
   display: block;
+  width: 190px;
   padding: 13px 20px;
-  border-bottom: 1px solid @divider--light;
 }
 
 .navigation__img {
@@ -27,6 +31,7 @@
   padding: 0;
   list-style-type: none;
   background-color: @back;
+  z-index: 1;
 
   &--hidden {
     display: none;
@@ -61,8 +66,10 @@
   right: 20px;
   width: 24px;
   height: 24px;
+  padding: 0;
   border: none;
   background: none;
+  cursor: pointer;
 
   &--close::before {
     position: absolute;
@@ -103,6 +110,10 @@
   .navigation {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .navigation__logo-wrapper {
+    border-bottom: none;
   }
 
   .navigation__logo {
@@ -154,6 +165,7 @@
 
   .navigation__logo {
     display: block;
+    width: 210px;
     padding: 55px 0 25px 110px;
   }
 

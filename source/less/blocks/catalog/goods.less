@@ -34,7 +34,7 @@
 .goods__description-list {
   margin: 0 0 15px 0;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .goods__item {
@@ -78,11 +78,15 @@
     line-height: 36px;
   }
 
+  .goods__list {
+    margin: 0 0 70px 0;
+  }
+
   .goods__item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    padding-bottom: 28px;
+    padding: 0 0 28px 0;
   }
 
   .goods__title {
@@ -129,6 +133,10 @@
     padding: 76px 0 80px 0;
   }
 
+  .goods__list {
+    margin: 0;
+  }
+
   .goods__item {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content;
@@ -137,11 +145,11 @@
   }
 
   .goods__title {
-    padding: 0;
+    padding: 10px 0;
   }
 
   .goods__description-list {
-    padding: 0;
+    padding: 10px 0;
   }
 
   .goods-description__term {
