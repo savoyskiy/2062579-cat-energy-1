@@ -26,12 +26,33 @@
 }
 
 .additional__label {
+  display: flex;
+  align-items: center;
   font-family: @title;
   font-size: 16;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
   color: @textual;
+}
+
+.additional__checkbox {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border: 1px solid @divider--dark;
+  box-sizing: border-box;
+}
+
+.additional__input:checked + .additional__checkbox {
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: url("../img/icon-checked--mobile.svg");
+  }
 }
 
 /*планшетный вид*/
@@ -51,11 +72,24 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
     row-gap: 32px;
+    column-gap: 60px;
   }
 
   .additional__label {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .additional__checkbox {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .additional__input:checked + .additional__checkbox {
+    &::after {
+      content: url("../img/icon-checked--tablet.svg");
+    }
   }
 }
 
@@ -69,5 +103,6 @@
   .additional__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: min-content;
+    column-gap: 80px;
   }
 }

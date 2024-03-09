@@ -72,21 +72,21 @@
             <ul class="programm-type__list">
               <li class="programm-type__item">
                 <label class="programm-type__label" for="slim">
-                  <input class="programm-type__checkbox visually-hidden" type="radio" id="slim" name="programm-type" value="slim" checked>
+                  <input class="programm-type__input visually-hidden" type="radio" id="slim" name="programm-type" value="slim" checked>
                   <span class="programm-type__radio"></span>
                   похудение
                 </label>
               </li>
               <li class="programm-type__item">
                 <label class="programm-type__label" for="pro">
-                  <input class="programm-type__checkbox visually-hidden" type="radio" id="pro" name="programm-type" value="pro">
+                  <input class="programm-type__input visually-hidden" type="radio" id="pro" name="programm-type" value="pro">
                   <span class="programm-type__radio"></span>
                   набор массы
                 </label>
               </li>
               <li class="programm-type__item">
                 <label class="programm-type__label" for="help">
-                  <input class="programm-type__checkbox visually-hidden" type="radio" id="help" name="programm-type" value="help">
+                  <input class="programm-type__input visually-hidden" type="radio" id="help" name="programm-type" value="help">
                   <span class="programm-type__radio"></span>
                   не знаю (нужен ваш совет)
                 </label>
@@ -125,20 +125,32 @@
             <legend class="additional__title">Дополнительно</legend>
             <ul class="additional__list">
               <li class="additional__item">
-                <input class="additional__input" type="checkbox" id="sweetener" name="sweetener" checked>
-                <label class="additional__label" for="sweetener">сахарозаменитель</label>
+                <label class="additional__label" for="sweetener">
+                  <input class="additional__input visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
+                  <span class="additional__checkbox"></span>
+                  сахарозаменитель
+                </label>
               </li>
               <li class="additional__item">
-                <input class="additional__input" type="checkbox" id="water" name="water">
-                <label class="additional__label" for="water">питьевая вода</label>
+                <label class="additional__label" for="water">
+                  <input class="additional__input visually-hidden" type="checkbox" id="water" name="water">
+                  <span class="additional__checkbox"></span>
+                  питьевая вода
+                </label>
               </li>
               <li class="additional__item">
-                <input class="additional__input" type="checkbox" id="milk" name="milk">
-                <label class="additional__label" for="milk">молоко</label>
+                <label class="additional__label" for="milk">
+                  <input class="additional__input visually-hidden" type="checkbox" id="milk" name="milk">
+                  <span class="additional__checkbox"></span>
+                  молоко
+                </label>
               </li>
               <li class="additional__item">
-                <input class="additional__input" type="checkbox" id="vitamins" name="vitamins">
-                <label class="additional__label" for="vitamins">витамины</label>
+                <label class="additional__label" for="vitamins">
+                  <input class="additional__input visually-hidden" type="checkbox" id="vitamins" name="vitamins">
+                  <span class="additional__checkbox"></span>
+                  витамины
+                </label>
               </li>
             </ul>
           </fieldset>
