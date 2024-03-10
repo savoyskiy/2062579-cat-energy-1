@@ -13,6 +13,14 @@
   display: block;
   width: 190px;
   padding: 13px 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .navigation__img {
@@ -146,9 +154,28 @@
   }
 
   .navigation__link {
+    position: relative;
     padding: 14px 0 15px 0;
     font-size: 18px;
     line-height: 24px;
+
+    &--current::after {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 2px;
+      background-color: @elementary;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .navigation__button {
@@ -194,6 +221,10 @@
 
     &--index {
       color: @back;
+    }
+
+    &--index.navigation__link--current::after {
+      background-color: @back;
     }
   }
 }

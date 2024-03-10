@@ -18,6 +18,14 @@
   text-align: center;
   border-bottom: 1px solid @divider;
   box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__social-list {
@@ -44,10 +52,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.page-footer__social-icon {
-  display: block;
+  &:hover path {
+    fill: @elementary;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__producer {
@@ -61,6 +73,14 @@
   line-height: 20px;
   color: @textual;
   text-decoration: none;
+
+  &:hover path {
+    fill: @elementary;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 /*планшетный вид*/
