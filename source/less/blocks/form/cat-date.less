@@ -46,7 +46,6 @@
   &:invalid {
     padding: 12px 14px 11px 14px;
     border: 2px solid @error;
-    outline: none;
   }
 
   &:invalid:placeholder-shown {
@@ -92,6 +91,16 @@
     font-size: 20px;
     line-height: 30px;
 
+    &:invalid {
+      padding: 9px 19px;
+    }
+
+    &:invalid:placeholder-shown {
+      padding: 10px 20px;
+      border: 1px solid @input-border;
+    }
+
+    &:invalid:placeholder-shown:focus,
     &:focus {
       padding: 9px 19px;
     }
