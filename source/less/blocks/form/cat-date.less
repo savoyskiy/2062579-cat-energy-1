@@ -18,6 +18,7 @@
   display: grid;
   grid-template-columns: max-content auto;
   align-items: center;
+  height: 45px;
 }
 
 .cat-date__parameter {
@@ -32,14 +33,30 @@
 
 .cat-date__input {
   flex-grow: 1;
-  padding: 14px 15px 13px 15px;
+  padding: 13px 15px 12px 15px;
   border: 1px solid @input-border;
+  box-sizing: border-box;
   font-family: @title;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
   color: @textual;
+
+  /*&:invalid {
+    padding: 12px 15px 11px 15px;
+    border: 2px solid @error;
+  }*/
+
+  &:hover {
+    border-color: @divider--dark;
+  }
+
+  &:focus {
+    padding: 12px 14px 11px 14px;
+    border: 2px solid @textual;
+    outline: none;
+  }
 }
 
 /*планшетный вид*/
@@ -53,6 +70,10 @@
     gap: 20px;
   }
 
+  .cat-date__label {
+    height: 52px;
+  }
+
   .cat-date__parameter {
     font-size: 20px;
     line-height: 30px;
@@ -62,6 +83,10 @@
     padding: 10px 20px;
     font-size: 20px;
     line-height: 30px;
+
+    &:focus {
+      padding: 9px 19px;
+    }
   }
 }
 

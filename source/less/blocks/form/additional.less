@@ -34,6 +34,10 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @textual;
+
+  &:hover .additional__checkbox {
+    border-color: @divider--second;
+  }
 }
 
 .additional__checkbox {
@@ -52,6 +56,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     content: url("../img/icon-checked--mobile.svg");
+  }
+}
+
+.additional__input {
+  &:disabled ~ .additional__checkbox,
+  &:disabled ~ .additional__text {
+    opacity: 0.3;
   }
 }
 

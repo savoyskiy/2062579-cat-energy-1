@@ -23,6 +23,10 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @textual;
+
+  &:hover .programm-type__radio {
+    border-color: @divider--second;
+  }
 }
 
 .programm-type__radio {
@@ -47,6 +51,13 @@
     height: 13px;
     border-radius: 50%;
     background-color: @elementary;
+  }
+}
+
+.programm-type__input {
+  &:disabled ~ .programm-type__radio,
+  &:disabled ~ .programm-type__text {
+    opacity: 0.3;
   }
 }
 
