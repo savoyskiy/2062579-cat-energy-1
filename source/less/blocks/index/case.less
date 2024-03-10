@@ -78,6 +78,13 @@
 
 .case__slider {
   min-height: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.case__slider-provisional {
+  display: block;
 }
 
 /*планшетный вид*/
@@ -90,7 +97,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content;
-    padding: 0 30px;
+    padding: 0 30px 250px 0;
     background-color: @back;
   }
 
@@ -142,6 +149,14 @@
   .case__slider {
     padding: 0 30px;
   }
+
+  .case__slider-provisional {
+    position: relative;
+    top: -151px;
+    margin: 0 0 -151px 0;
+    width: 560px;
+    height: 512px;
+  }
 }
 
 /*десктопный вид*/
@@ -189,5 +204,10 @@
     justify-self: left;
     max-width: 327px;
     padding: 60px 0 75px 0;
+  }
+
+  .case__slider {
+    justify-content: flex-start;
+    padding: 0 0 0 50px;
   }
 }
