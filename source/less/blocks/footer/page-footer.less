@@ -5,7 +5,7 @@
 
 .page-footer__container {
   width: 100%;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
 
 .page-footer__logo {
   width: 100%;
-  padding: 40px 76px 20px 76px;
+  padding: 20px 26px 20px 26px;
   text-align: center;
   border-bottom: 1px solid @divider;
   box-sizing: border-box;
@@ -53,7 +53,8 @@
   justify-content: center;
   align-items: center;
 
-  &:hover path {
+  &:hover path,
+  &:focus path {
     fill: @elementary;
   }
 
@@ -67,14 +68,16 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px 20px 40px 20px;
+  margin: 20px auto 40px auto;
+  padding: 0;
   font-family: @text;
   font-size: 16px;
   line-height: 20px;
   color: @textual;
   text-decoration: none;
 
-  &:hover path {
+  &:hover path,
+  &:focus path {
     fill: @elementary;
   }
 
@@ -113,6 +116,7 @@
 
   .page-footer__producer {
     width: 163px;
+    margin: 0;
     padding: 0;
   }
 }

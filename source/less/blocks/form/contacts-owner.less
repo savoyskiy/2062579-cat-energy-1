@@ -65,10 +65,31 @@
   text-transform: uppercase;
   color: @textual;
 
+  &:invalid {
+    padding: 12px 39px 11px 14px;
+    border: 2px solid @error;
+    outline: none;
+  }
+
+  &:invalid + .contacts-owner__type-icon path {
+    stroke: @error;
+  }
+
+  &:invalid:placeholder-shown {
+    padding: 13px 40px 12px 15px;
+    border: 1px solid @input-border;
+  }
+
+  &:invalid:placeholder-shown + .contacts-owner__type-icon path {
+    stroke: @titular;
+  }
+
+  &:invalid:placeholder-shown:hover,
   &:hover {
     border-color: @divider--dark;
   }
 
+  &:invalid:placeholder-shown:focus,
   &:focus {
     padding: 12px 39px 11px 14px;
     border: 2px solid @textual;
