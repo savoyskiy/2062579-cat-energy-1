@@ -32,18 +32,16 @@
   align-items: center;
   height: 45px;
 
-  &--email::after {
+  &--email .contacts-owner__type-icon {
     position: absolute;
     top: 13px;
     right: 12px;
-    content: url("../img/icon-input--email.svg");
   }
 
-  &--phone::after {
+  &--phone .contacts-owner__type-icon {
     position: absolute;
     top: 13px;
     right: 12px;
-    content: url("../img/icon-input--phone.svg");
   }
 }
 
@@ -76,6 +74,10 @@
     border: 2px solid @textual;
     outline: none;
   }
+
+  &:focus + .contacts-owner__type-icon path {
+    stroke: @elementary;
+  }
 }
 
 /*планшетный вид*/
@@ -105,12 +107,12 @@
   .contacts-owner__label {
     height: 52px;
 
-    &--email::after {
+    &--email .contacts-owner__type-icon {
       top: 18px;
       right: 14px;
     }
 
-    &--phone::after {
+    &--phone .contacts-owner__type-icon {
       top: 18px;
       right: 14px;
     }
@@ -152,11 +154,11 @@
   }
 
   .contacts-owner__label {
-    &--email::after {
+    &--email .contacts-owner__type-icon {
       right: 16px;
     }
 
-    &--phone::after {
+    &--phone .contacts-owner__type-icon {
       right: 16px;
     }
   }
