@@ -37,8 +37,8 @@
 }
 
 .case__term {
-  position: absolute;
-  top: 49px;
+  position: relative;
+  bottom: 8px;
   left: 50%;
   transform: translate(-50%);
   width: 81px;
@@ -156,7 +156,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content;
-    padding: 0 30px 250px 0;
+    padding: 0 30px 250px 30px;
     background-color: @back;
   }
 
@@ -181,7 +181,7 @@
   }
 
   .case__term {
-    top: 65px;
+    bottom: 8px;
     width: 125px;
     padding: 0 8px;
     font-size: 14px;

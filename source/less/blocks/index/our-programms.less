@@ -52,7 +52,7 @@
 .our-programms__link {
   position: relative;
   display: block;
-  max-width: 140px;
+  max-width: 100px;
   padding: 19px 39px 22px 0;
   font-family: @title;
   font-size: 16px;
@@ -64,8 +64,9 @@
 
   &::after {
     position: absolute;
-    top: 18px;
-    left: 100px;
+    top: 50%;
+    transform: translate(0, -70%);
+    right: 10px;
     content: url("../img/icon_arrow--mobile.svg");
   }
 
@@ -121,15 +122,16 @@
   }
 
   .our-programms__link {
-    max-width: 200px;
-    padding: 0;
+    max-width: 120px;
+    padding: 0 39px 0 0;
     font-size: 20px;
     line-height: 30px;
 
     &::after {
       position: absolute;
-      top: -3px;
-      left: 130px;
+      top: 50%;
+      transform: translateY(-60%);
+      left: 120px;
       content: url("../img/icon_arrow--mobile.svg");
     }
   }
