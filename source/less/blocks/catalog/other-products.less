@@ -1,4 +1,6 @@
 .other-products {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 25px 20px;
   box-sizing: border-box;
@@ -39,7 +41,8 @@
 }
 
 .other-products__description {
-  margin: 0 0 21px 0;
+  flex-grow: 1;
+  margin: 0;
   text-align: center;
   font-family: @text;
   font-size: 12px;
@@ -85,7 +88,7 @@
   }
 
   .other-products__description {
-    margin: 0 0 81px 0;
+    margin: 0;
     min-height: 36px;
     padding: 0 40px;
     font-size: 16px;
@@ -102,7 +105,7 @@
   }
 
   .other-products__description {
-    margin: 0 0 90px 0;
+    margin: 0;
     padding: 0;
     font-size: 16px;
     line-height: 18px;
