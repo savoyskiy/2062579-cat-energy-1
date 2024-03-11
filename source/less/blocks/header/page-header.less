@@ -6,8 +6,20 @@
 /*планшетный вид*/
 @media (min-width: @tablet) {
   .page-header {
+    position: relative;
     padding: 25px 30px;
     min-height: 50px;
+
+    &--index::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 59px;
+      content: "";
+      height: 1px;
+      background-color: @error;
+      z-index: 1;
+    }
   }
 }
 
@@ -19,6 +31,10 @@
 
     &--index {
       background-image: linear-gradient(to right, @back 51%, @elementary--dark 51% 100%);
+
+      &::after {
+        display: none;
+      }
     }
   }
 
