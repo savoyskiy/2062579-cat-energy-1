@@ -18,7 +18,40 @@
 }
 
 .how-it-work__item {
-  padding-left: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding: 0 0 0 80px;
+  gap: 20px;
+
+  &--leaf::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: url("../img/icon-leaf--mobile.svg");
+  }
+
+  &--boil::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: url("../img/icon-boil--mobile.svg");
+  }
+
+  &--cutlery::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: url("../img/icon-cutlery--mobile.svg");
+  }
+
+  &--clock::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: url("../img/icon-clock--mobile.svg");
+  }
 }
 
 .how-it-work__text {
@@ -27,6 +60,7 @@
   font-size: 14px;
   line-height: 18px;
   color: @textual;
+  z-index: 1;
 }
 
 /*планшетный вид*/
@@ -41,19 +75,58 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    row-gap: 37px;
-    column-gap: 60px;
+    row-gap: 90px;
+    column-gap: 137px;
     padding: 0 105px 47px 30px;
+    counter-reset: item;
   }
 
   .how-it-work__item {
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto;
     padding-left: 0;
     padding-top: 151px;
+
+    &--leaf::before {
+      top: 40px;
+      content: url("../img/icon-leaf--tablet.svg");
+    }
+
+    &--boil::before {
+      top: 40px;
+      content: url("../img/icon-boil--tablet.svg");
+    }
+
+    &--cutlery::before {
+      top: 40px;
+      content: url("../img/icon-cutlery--tablet.svg");
+    }
+
+    &--clock::before {
+      top: 40px;
+      content: url("../img/icon-clock--tablet.svg");
+    }
+
+    &::after {
+      counter-increment: item;
+      content: counter(item) "";
+      position: absolute;
+      top: 0;
+      left: 113px;
+      font-family: @title;
+      font-size: 280px;
+      line-height: 280px;
+      color: @back-grey;
+    }
   }
 }
 
 /*десктопный вид*/
 @media (min-width: @desktop) {
+  .how-it-work {
+    margin: 0 0 69px 0;
+  }
+
   .how-it-work__container {
     width: 1220px;
   }

@@ -15,11 +15,14 @@
 }
 
 .cat-date__label {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content auto;
   align-items: center;
+  min-height: 45px;
 }
 
 .cat-date__parameter {
+  max-width: 93px;
   margin-right: 13px;
   font-family: @title;
   font-size: 16px;
@@ -30,15 +33,40 @@
 }
 
 .cat-date__input {
+  align-self: start;
   flex-grow: 1;
-  padding: 14px 15px 13px 15px;
+  min-width: 0; // для минимальной ширины в ФайрФокс
+  padding: 13px 15px 12px 15px;
   border: 1px solid @input-border;
+  box-sizing: border-box;
   font-family: @title;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
   color: @textual;
+
+  &:invalid {
+    padding: 12px 14px 11px 14px;
+    border: 2px solid @error;
+  }
+
+  &:invalid:placeholder-shown {
+    padding: 13px 15px 12px 15px;
+    border: 1px solid @input-border;
+  }
+
+  &:invalid:placeholder-shown:hover,
+  &:hover {
+    border-color: @divider--dark;
+  }
+
+  &:invalid:placeholder-shown:focus,
+  &:focus {
+    padding: 12px 14px 11px 14px;
+    border: 2px solid @textual;
+    outline: none;
+  }
 }
 
 /*планшетный вид*/
@@ -52,20 +80,41 @@
     gap: 20px;
   }
 
+  .cat-date__label {
+    min-height: 52px;
+  }
+
   .cat-date__parameter {
+    max-width: 236px;
     font-size: 20px;
     line-height: 30px;
   }
 
   .cat-date__input {
+    padding: 10px 20px;
     font-size: 20px;
     line-height: 30px;
+
+    &:invalid {
+      padding: 9px 19px;
+    }
+
+    &:invalid:placeholder-shown {
+      padding: 10px 20px;
+      border: 1px solid @input-border;
+    }
+
+    &:invalid:placeholder-shown:focus,
+    &:focus {
+      padding: 9px 19px;
+    }
   }
 }
 
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .cat-date {
+    max-width: 570px;
     padding: 0;
   }
 }

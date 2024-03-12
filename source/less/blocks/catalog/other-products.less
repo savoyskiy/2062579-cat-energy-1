@@ -1,10 +1,13 @@
 .other-products {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 25px 20px;
   box-sizing: border-box;
 }
 
 .other-products__title {
+  position: relative;
   margin: 0;
   padding: 53px 0 8px 0;
   text-align: center;
@@ -14,10 +17,32 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @titular--light;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translate(-50%);
+    background-color: @back-grey--plus;
+  }
+
+  &::before {
+    top: 0;
+    width: 2px;
+    height: 30px;
+  }
+
+  &::after {
+    top: 14px;
+    width: 30px;
+    height: 2px;
+  }
 }
 
 .other-products__description {
-  margin: 0 0 21px 0;
+  flex-grow: 1;
+  margin: 0;
   text-align: center;
   font-family: @text;
   font-size: 12px;
@@ -29,6 +54,14 @@
   width: 100%;
   color: @textual;
   background-color: @back-grey;
+
+  &:hover {
+    background-color: @back-grey--second;
+  }
+
+  &:active .other-products__button-text {
+    opacity: 0.3;
+  }
 }
 
 /*планшетный вид*/
@@ -39,13 +72,24 @@
   }
 
   .other-products__title {
-    padding: 110px 68px 23px 68px;
+    padding: 110px 50px 23px 58px;
+    min-height: 48px;
     font-size: 20px;
     line-height: 24px;
+
+    &::before {
+      height: 60px;
+    }
+
+    &::after {
+      top: 29px;
+      width: 60px;
+    }
   }
 
   .other-products__description {
-    margin: 0 0 32px 0;
+    margin: 0;
+    min-height: 36px;
     padding: 0 40px;
     font-size: 16px;
     line-height: 18px;
@@ -61,7 +105,7 @@
   }
 
   .other-products__description {
-    margin: 0 0 90px 0;
+    margin: 0;
     padding: 0;
     font-size: 16px;
     line-height: 18px;

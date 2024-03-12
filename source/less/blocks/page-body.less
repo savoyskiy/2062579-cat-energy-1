@@ -1,4 +1,5 @@
 .page-body {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -6,4 +7,57 @@
   width: 100%;
   min-width: 320px;
   background-color: @back;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    min-height: 100%;
+    height: auto;
+    background-color: @error;
+    z-index: 2;
+  }
+
+  &::before {
+    left: 20px;
+  }
+
+  &::after {
+    right: 20px;
+  }
+}
+
+/*планшетный вид*/
+@media (min-width: @tablet) {
+  .page-body {
+    &::before {
+      left: 30px;
+    }
+
+    &::after {
+      right: 30px;
+    }
+  }
+}
+
+/*десктопный вид*/
+@media (min-width: @desktop) {
+  .page-body {
+    &::before {
+      left: 50%;
+      transform: translate(-610px);
+    }
+
+    &::after {
+      right: 50%;
+      transform: translate(610px);
+    }
+  }
+
+  .page-body--form.page-body {
+    &::before {
+      box-shadow: 570px 0 0 0 @error;
+    }
+  }
 }

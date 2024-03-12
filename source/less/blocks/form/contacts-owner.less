@@ -26,11 +26,27 @@
 }
 
 .contacts-owner__label {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content auto;
   align-items: center;
+  min-height: 45px;
+
+  &--email .contacts-owner__type-icon {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+  }
+
+  &--phone .contacts-owner__type-icon {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+  }
 }
 
 .contacts-owner__type {
+  max-width: 67px;
   margin-right: 13px;
   font-family: @title;
   font-size: 16px;
@@ -41,8 +57,9 @@
 }
 
 .contacts-owner__input {
-  flex-grow: 1;
-  padding: 14px 15px 13px 15px;
+  align-self: start;
+  min-width: 0; // для минимальной ширины в ФайрФокс
+  padding: 13px 40px 12px 15px;
   border: 1px solid @input-border;
   font-family: @title;
   font-size: 16px;
@@ -50,11 +67,46 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @textual;
+
+  &:invalid {
+    padding: 12px 39px 11px 14px;
+    border: 2px solid @error;
+  }
+
+  &:invalid + .contacts-owner__type-icon path {
+    stroke: @error;
+  }
+
+  &:invalid:placeholder-shown {
+    padding: 13px 40px 12px 15px;
+    border: 1px solid @input-border;
+  }
+
+  &:invalid:placeholder-shown + .contacts-owner__type-icon path {
+    stroke: @titular;
+  }
+
+  &:invalid:placeholder-shown:hover,
+  &:hover {
+    border-color: @divider--dark;
+  }
+
+  &:invalid:placeholder-shown:focus,
+  &:focus {
+    padding: 12px 39px 11px 14px;
+    border: 2px solid @textual;
+    outline: none;
+  }
+
+  &:focus + .contacts-owner__type-icon path {
+    stroke: @elementary;
+  }
 }
 
 /*планшетный вид*/
 @media (min-width: @tablet) {
   .contacts-owner {
+    display: grid;
     padding: 0 30px 65px 30px;
   }
 
@@ -70,14 +122,50 @@
     gap: 20px;
   }
 
+  .contacts-owner__label {
+    min-height: 52px;
+
+    &--email .contacts-owner__type-icon {
+      top: 18px;
+      right: 14px;
+    }
+
+    &--phone .contacts-owner__type-icon {
+      top: 18px;
+      right: 14px;
+    }
+  }
+
   .contacts-owner__type {
+    max-width: 300px;
     font-size: 20px;
     line-height: 30px;
   }
 
   .contacts-owner__input {
+    padding: 10px 40px 10px 15px;
     font-size: 20px;
     line-height: 30px;
+
+    &:invalid {
+      padding: 9px 39px 9px 14px;
+      border: 2px solid @error;
+    }
+
+    &:invalid:placeholder-shown {
+      padding: 10px 40px 10px 15px;
+    }
+
+    &:hover {
+      border-color: @divider--dark;
+    }
+
+    &:invalid:placeholder-shown:focus,
+    &:focus {
+      padding: 9px 39px 9px 14px;
+      border: 2px solid @textual;
+      outline: none;
+    }
   }
 }
 
@@ -85,6 +173,7 @@
 @media (min-width: @desktop) {
   .contacts-owner {
     grid-column: ~"1 / -1";
+    max-width: 1220px;
     padding: 70px 0;
   }
 
@@ -97,5 +186,15 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     padding: 0;
+  }
+
+  .contacts-owner__label {
+    &--email .contacts-owner__type-icon {
+      right: 16px;
+    }
+
+    &--phone .contacts-owner__type-icon {
+      right: 16px;
+    }
   }
 }

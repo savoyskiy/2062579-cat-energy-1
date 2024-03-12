@@ -1,8 +1,26 @@
 .navigation {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 0;
+}
+
+.navigation__logo-wrapper {
+  border-bottom: 1px solid @divider--light;
+}
+
+.navigation__logo {
+  display: block;
+  width: 190px;
+  padding: 13px 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .navigation__img {
@@ -11,19 +29,25 @@
 
 .navigation__list {
   position: absolute;
-  top: 51px;
-  left: -20px;
+  top: 65px;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: calc(100% + 40px);
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
   background-color: @back;
+  z-index: 1;
 
   &--hidden {
     display: none;
+  }
+
+  &--no-js {
+    position: static;
+    display: flex;
   }
 }
 
@@ -44,8 +68,71 @@
   text-transform: uppercase;
 }
 
+.navigation__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &--no-js {
+    display: none;
+  }
+
+  &--close::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @titular;
+    content: "";
+    box-shadow: 0 8px 0 0, 0 16px 0 0;
+  }
+
+  &--open::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: @titular;
+    content: "";
+    transform: rotate(45deg);
+  }
+
+  &--open::after {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: @titular;
+    content: "";
+    transform: rotate(-45deg);
+  }
+}
+
 /*планшетный вид*/
 @media (min-width: @tablet) {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navigation__logo-wrapper {
+    border-bottom: none;
+  }
+
+  .navigation__logo {
+    padding: 0;
+    border-bottom: none;
+  }
+
   .navigation__img {
     width: 174px;
     height: 50px;
@@ -71,9 +158,28 @@
   }
 
   .navigation__link {
+    position: relative;
     padding: 14px 0 15px 0;
     font-size: 18px;
     line-height: 24px;
+
+    &--current::after {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 2px;
+      background-color: @elementary;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .navigation__button {
@@ -88,9 +194,13 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .navigation__logo-wrapper {
+    padding: 55px 0 0 110px;
+  }
+
   .navigation__logo {
     display: block;
-    padding: 55px 0 25px 110px;
+    width: 210px;
   }
 
   .navigation__img {
@@ -118,6 +228,10 @@
 
     &--index {
       color: @back;
+    }
+
+    &--index.navigation__link--current::after {
+      background-color: @back;
     }
   }
 }

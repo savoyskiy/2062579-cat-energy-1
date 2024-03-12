@@ -15,12 +15,51 @@
 }
 
 .programm-type__label {
+  display: flex;
+  align-items: center;
   font-family: @title;
   font-size: 16;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
   color: @textual;
+
+  &:hover .programm-type__radio {
+    border-color: @divider--second;
+  }
+}
+
+.programm-type__radio {
+  position: relative;
+  flex-shrink: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border: 1px solid @divider--dark;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.programm-type__input:checked + .programm-type__radio {
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: @elementary;
+  }
+}
+
+.programm-type__input {
+  &:disabled ~ .programm-type__radio,
+  &:disabled ~ .programm-type__text {
+    opacity: 0.3;
+  }
 }
 
 /*планшетный вид*/
@@ -31,13 +70,26 @@
   }
 
   .programm-type__list {
-    padding: 23px 27px;
+    padding: 24px 27px;
     border: 1px solid @back-grey;
   }
 
   .programm-type__label {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .programm-type__radio {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .programm-type__input:checked + .programm-type__radio {
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 
@@ -48,6 +100,6 @@
   }
 
   .programm-type__list {
-    padding: 25px 28px;
+    padding: 24px 28px;
   }
 }
