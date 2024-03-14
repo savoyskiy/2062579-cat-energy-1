@@ -40,8 +40,8 @@
 
     <!--основной раздел-->
     <main class="form-main">
-        <h1 class="form-main__title">Подбор программы</h1>
-        <p class="form-main__description">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+        <h1 class="form-main__title container">Подбор программы</h1>
+        <p class="form-main__description container">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
 
         <form class="form-main__programm programm" action="https://echo.htmlacademy.ru/" method="post">
           <!--данные кота-->
@@ -99,7 +99,9 @@
 
           <!--контакты владельца-->
           <fieldset class="programm__contacts-owner contacts-owner">
-            <legend class="contacts-owner__title">Контактные данные (владельца кота)</legend>
+            <legend class="contacts-owner__title">
+              <span class="contacts-owner__title-text">Контактные данные (владельца кота)</span>
+            </legend>
             <ul class="contacts-owner__list">
               <li class="contacts-owner__item">
                 <label class="contacts-owner__label contacts-owner__label--email" for="email">
@@ -124,14 +126,18 @@
 
           <!--комментарий-->
           <fieldset class="programm__comments comments">
-            <legend class="comments__title">Комментарий</legend>
+            <legend class="comments__title">
+              <span class="comments__title-text">Комментарий</span>
+            </legend>
 
             <textarea class="comments__textarea" name="comments" id="comments" cols="25" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <!--дополнительно-->
           <fieldset class="programm__additional additional">
-            <legend class="additional__title">Дополнительно</legend>
+            <legend class="additional__title">
+              <span class="additional__title-text">Дополнительно</span>
+            </legend>
             <ul class="additional__list">
               <li class="additional__item">
                 <label class="additional__label" for="sweetener">

@@ -125,15 +125,25 @@
   .contacts-owner__title {
     margin: 0;
     padding: 0 40px 76px 40px;
-    max-width: 532px;
+    max-width: 612px;
     font-size: 36px;
     line-height: 36px;
+    z-index: 1;
 
     &::after {
       top: 20px;
-      right: 0;
-      left: 612px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      z-index: -1;
     }
+  }
+
+  .contacts-owner__title-text {
+    position: relative;
+    left: -40px;
+    padding: 0 40px;
+    background-color: @back;
   }
 
   .contacts-owner__list {
@@ -200,10 +210,7 @@
     padding: 0 0 76px 0;
 
     &::after {
-      top: 22px;
-      right: 50%;
-      transform: translateX(-50%);
-      width: 100vw;
+      top: 92px;
     }
   }
 

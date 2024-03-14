@@ -27,6 +27,10 @@
   }
 }
 
+.comments__title-text {
+  background-color: @back;
+}
+
 .comments__textarea {
   padding: 14px 15px;
   border: 1px solid @input-border;
@@ -60,12 +64,21 @@
     max-width: 182px;
     font-size: 36px;
     line-height: 36px;
+    z-index: 1;
 
     &::after {
       top: 20px;
-      right: 0;
-      left: 282px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      z-index: -1;
     }
+  }
+
+  .comments__title-text {
+    position: relative;
+    left: -40px;
+    padding: 0 40px;
   }
 
   .comments__textarea {
@@ -92,9 +105,6 @@
 
     &::after {
       top: 22px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100vw;
     }
   }
 

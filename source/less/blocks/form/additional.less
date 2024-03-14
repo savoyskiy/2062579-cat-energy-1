@@ -28,6 +28,10 @@
   }
 }
 
+.additional__title-text {
+  background-color: @back;
+}
+
 .additional__list {
   display: flex;
   flex-direction: column;
@@ -90,12 +94,21 @@
     margin: 0 0 57px 0;
     font-size: 36px;
     line-height: 36px;
+    z-index: 1;
 
     &::after {
       top: 21px;
-      right: 0;
-      left: 311px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      z-index: -1;
     }
+  }
+
+  .additional__title-text {
+    position: relative;
+    left: -40px;
+    padding: 0 40px;
   }
 
   .additional__list {
@@ -134,9 +147,6 @@
   .additional__title {
     &::after {
       top: 22px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100vw;
     }
   }
 
