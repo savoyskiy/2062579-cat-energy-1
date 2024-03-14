@@ -61,16 +61,6 @@
     font-size: 36px;
     line-height: 36px;
 
-    &::before {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      width: 30px;
-      content: "";
-      height: 2px;
-      background-color: @elementary;
-    }
-
     &::after {
       top: 20px;
       right: 0;
@@ -92,7 +82,7 @@
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .comments {
-    grid-column: ~"1 / -1";
+    grid-column: ~"2 / -2";
     max-width: 1220px;
     padding: 0 0 70px 0;
   }
@@ -100,17 +90,11 @@
   .comments__title {
     margin: 0 0 78px 0;
 
-    &::before {
-      top: 22px;
-      left: auto;
-      right: 1260px;
-      width: 100%;
-    }
-
     &::after {
       top: 22px;
-      left: 222px;
-      width: 150%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
     }
   }
 
