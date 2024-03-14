@@ -28,6 +28,7 @@
 .goods__heading-text {
   display: block;
   max-width: 226px;
+  background-color: @back;
 }
 
 .goods__list {
@@ -119,7 +120,10 @@
   }
 
   .goods__heading-text {
+    position: relative;
+    left: -40px;
     max-width: 339px;
+    padding: 0 40px;
   }
 
   .goods__list {
@@ -169,23 +173,39 @@
     grid-template-rows: min-content min-content;
     grid-template-columns: auto 245px;
     column-gap: 80px;
+    width: 1220px;
     padding: 0;
     margin-bottom: 87px;
     z-index: 1;
   }
 
   .goods__heading {
+    position: relative;
+    z-index: 1;
     grid-column: ~"1 / -1";
     padding: 76px 0 80px 0;
 
-    &::before {
+    /*&::before {
+      display: none;
       top: 96px;
       left: auto;
       right: 1260px;
       width: 100%;
+    }*/
+    &::before {
+      position: absolute;
+      content: "";
+      top: 98px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 2px;
+      background-color: @elementary;
+      z-index: -1;
     }
 
     &::after {
+      display: none;
       top: 96px;
       left: 379px;
       right: auto;
