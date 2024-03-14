@@ -1,4 +1,5 @@
 .contacts-owner {
+  position: relative;
   display: grid;
   margin: 0;
   padding: 26px 20px 24px 20px;
@@ -9,11 +10,22 @@
   float: left;
   margin: 0 0 35px 0;
   padding: 0;
+  max-width: 187px;
   font-family: @title;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   color: @titular;
+
+  &::after {
+    position: absolute;
+    top: 40px;
+    left: 220px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-color: @elementary;
+  }
 }
 
 .contacts-owner__list {
@@ -113,8 +125,25 @@
   .contacts-owner__title {
     margin: 0;
     padding: 0 40px 76px 40px;
+    max-width: 532px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 30px;
+      content: "";
+      height: 2px;
+      background-color: @elementary;
+    }
+
+    &::after {
+      top: 20px;
+      right: 0;
+      left: 612px;
+    }
   }
 
   .contacts-owner__list {
@@ -179,6 +208,19 @@
 
   .contacts-owner__title {
     padding: 0 0 76px 0;
+
+    &::before {
+      top: 92px;
+      left: auto;
+      right: 1260px;
+      width: 100%;
+    }
+
+    &::after {
+      top: 92px;
+      left: 552px;
+      width: 100%;
+    }
   }
 
   .contacts-owner__list {

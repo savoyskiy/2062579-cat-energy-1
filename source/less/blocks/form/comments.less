@@ -1,4 +1,5 @@
 .comments {
+  position: relative;
   display: grid;
   margin: 0;
   padding: 0 20px 23px 20px;
@@ -9,10 +10,21 @@
   float: left;
   margin: 0 0 38px 0;
   padding: 0;
+  max-width: 121px;
   font-family: @title;
   font-size: 24px;
   line-height: 26px;
   color: @titular;
+
+  &::after {
+    position: absolute;
+    top: 12px;
+    left: 161px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-color: @elementary;
+  }
 }
 
 .comments__textarea {
@@ -45,8 +57,25 @@
 
   .comments__title {
     margin: 0 0 87px 0;
+    max-width: 182px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 30px;
+      content: "";
+      height: 2px;
+      background-color: @elementary;
+    }
+
+    &::after {
+      top: 20px;
+      right: 0;
+      left: 282px;
+    }
   }
 
   .comments__textarea {
@@ -70,6 +99,19 @@
 
   .comments__title {
     margin: 0 0 78px 0;
+
+    &::before {
+      top: 22px;
+      left: auto;
+      right: 1260px;
+      width: 100%;
+    }
+
+    &::after {
+      top: 22px;
+      left: 222px;
+      width: 150%;
+    }
   }
 
   .comments__textarea {

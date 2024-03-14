@@ -1,4 +1,5 @@
 .additional {
+  position: relative;
   display: grid;
   margin: 0;
   padding: 0 20px 34px 20px;
@@ -9,11 +10,22 @@
   float: left;
   margin: 0 0 34px 0;
   padding: 0;
+  max-width: 141px;
   font-family: @title;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   color: @titular;
+
+  &::after {
+    position: absolute;
+    top: 16px;
+    left: 181px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-color: @elementary;
+  }
 }
 
 .additional__list {
@@ -74,10 +86,26 @@
   }
 
   .additional__title {
-    max-width: 1220px;
+    max-width: 211px;
     margin: 0 0 57px 0;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      top: 21px;
+      left: 0;
+      width: 30px;
+      content: "";
+      height: 2px;
+      background-color: @elementary;
+    }
+
+    &::after {
+      top: 21px;
+      right: 0;
+      left: 311px;
+    }
   }
 
   .additional__list {
@@ -111,6 +139,21 @@
   .additional {
     grid-column: ~"1 / -1";
     padding: 0 0 60px 0;
+  }
+
+  .additional__title {
+    &::before {
+      top: 22px;
+      left: auto;
+      right: 1260px;
+      width: 100%;
+    }
+
+    &::after {
+      top: 22px;
+      left: 252px;
+      width: 150%;
+    }
   }
 
   .additional__list {
