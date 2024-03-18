@@ -101,15 +101,18 @@
 .case__slider-before {
   width: 140px;
   height: 256px;
-  background-image: url("../img/cat-before--mobile.png");
-  background-position: left center;
+  overflow: hidden;
 }
 
 .case__slider-after {
   width: 140px;
   height: 256px;
-  background-image: url("../img/cat-after--mobile.png");
-  background-position: right center;
+  overflow: hidden;
+
+  & img {
+    position: relative;
+    right: 100%;
+  }
 }
 
 .case__slider-control {
@@ -227,13 +230,11 @@
   .case__slider-before {
     width: 280px;
     height: 512px;
-    background-image: url("../img/cat-before--tablet.png");
   }
 
   .case__slider-after {
     width: 280px;
     height: 512px;
-    background-image: url("../img/cat-after--tablet.png");
   }
 }
 
