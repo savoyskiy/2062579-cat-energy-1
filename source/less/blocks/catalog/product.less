@@ -25,6 +25,22 @@
   text-transform: uppercase;
 }
 
+.product__title-link {
+  text-decoration: none;
+
+  &:visited {
+    color: @titular;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .product__link {
   grid-column: ~"1 / 2";
   grid-row: ~"1 / 3";
