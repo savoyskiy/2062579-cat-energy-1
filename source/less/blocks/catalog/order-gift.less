@@ -6,6 +6,10 @@
   background-size: cover;
   background-position: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bag_cat_green@2x.jpg");
+  }
+
   &::before {
     position: absolute;
     top: 59px;
@@ -33,6 +37,10 @@
     padding: 71px 125px 69px 421px;
     background-image: url("../img/bag_cat_green--tablet.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bag_cat_green--tablet@2x.jpg");
+    }
+
     &::before {
       top: 50%;
       transform: translateY(-50%);
@@ -51,6 +59,10 @@
   .order-gift {
     padding: 185px 42px 43px 42px;
     background-image: url("../img/bag_cat_green--desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bag_cat_green--desktop@2x.jpg");
+    }
 
     &::before {
       top: 56px;
