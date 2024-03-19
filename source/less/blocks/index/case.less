@@ -99,20 +99,19 @@
 }
 
 .case__slider-before {
-  width: 140px;
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
   height: 256px;
   overflow: hidden;
 }
 
 .case__slider-after {
-  width: 140px;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
   height: 256px;
   overflow: hidden;
-
-  & img {
-    position: relative;
-    right: 100%;
-  }
 }
 
 .case__slider-control {
@@ -228,12 +227,10 @@
   }
 
   .case__slider-before {
-    width: 280px;
     height: 512px;
   }
 
   .case__slider-after {
-    width: 280px;
     height: 512px;
   }
 }
