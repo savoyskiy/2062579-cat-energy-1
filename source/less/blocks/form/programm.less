@@ -57,14 +57,14 @@
 @media (min-width: @desktop) {
   .programm {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 570px 570px auto;
     grid-template-rows: min-content min-content min-content min-content min-content;
     column-gap: 80px;
     padding-bottom: 79px;
   }
 
   .programm__button-wrapper {
-    grid-column: ~"1 / -1";
+    grid-column: ~"2 / -2";
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;

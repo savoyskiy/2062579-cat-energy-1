@@ -1,4 +1,5 @@
 .contacts-owner {
+  position: relative;
   display: grid;
   margin: 0;
   padding: 26px 20px 24px 20px;
@@ -9,11 +10,27 @@
   float: left;
   margin: 0 0 35px 0;
   padding: 0;
+  max-width: 187px;
   font-family: @title;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   color: @titular;
+
+  &::after {
+    position: absolute;
+    top: 40px;
+    left: 220px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-color: @elementary;
+  }
+}
+
+.contacts-owner__title-text {
+  position: relative;
+  display: block;
 }
 
 .contacts-owner__list {
@@ -113,8 +130,24 @@
   .contacts-owner__title {
     margin: 0;
     padding: 0 40px 76px 40px;
+    max-width: 612px;
     font-size: 36px;
     line-height: 36px;
+    z-index: 1;
+
+    &::after {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      z-index: -1;
+    }
+  }
+
+  .contacts-owner__title-text {
+    left: -40px;
+    padding: 0 40px;
+    background-color: @back;
   }
 
   .contacts-owner__list {
@@ -172,13 +205,17 @@
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .contacts-owner {
-    grid-column: ~"1 / -1";
+    grid-column: ~"2 / -2";
     max-width: 1220px;
     padding: 70px 0;
   }
 
   .contacts-owner__title {
     padding: 0 0 76px 0;
+
+    &::after {
+      top: 92px;
+    }
   }
 
   .contacts-owner__list {

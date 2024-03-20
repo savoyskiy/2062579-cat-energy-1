@@ -92,16 +92,16 @@
 
   .invite__container {
     grid-template-rows: min-content;
-    grid-template-columns: auto;
+    grid-template-columns: auto 1220px auto;
     justify-content: center;
   }
 
   .invite__description {
     grid-row: ~"1 / -1";
-    grid-column: ~"1 / -1";
+    grid-column: ~"2 / -2";
     z-index: 1;
     align-self: start;
-    margin: 95px 0 105px 110px;
+    margin: 95px 0 105px 0;
     width: 405px;
     min-height: 78px;
     gap: 87px;
@@ -117,7 +117,7 @@
     grid-row: ~"1 / -1";
     grid-column: ~"1 / -1";
     align-self: stretch;
-    width: 1440px;
+    width: 100vw;
     min-height: 400px;
   }
 }

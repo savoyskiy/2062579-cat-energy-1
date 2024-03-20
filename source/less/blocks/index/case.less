@@ -30,6 +30,14 @@
   column-gap: 32px;
   row-gap: 16px;
   margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.case__sublist {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .dates__item {
@@ -91,24 +99,26 @@
 }
 
 .case__slider-before {
-  width: 140px;
+  display: flex;
+  justify-content: flex-start;
+  //width: 50%; - возможно, не нужен, оставить только в разметке?
   height: 256px;
-  background-image: url("../img/cat-before--mobile.png");
-  background-position: left center;
+  overflow: hidden;
 }
 
 .case__slider-after {
-  width: 140px;
+  display: flex;
+  justify-content: flex-end;
+  //width: 50%; - возможно, не нужен, оставить только в разметке?
   height: 256px;
-  background-image: url("../img/cat-after--mobile.png");
-  background-position: right center;
+  overflow: hidden;
 }
 
 .case__slider-control {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;
+  //left: 50%; - возможно, не нужен, оставить только в разметке?
   width: 4px;
   padding: 0;
   border: none;
@@ -217,15 +227,11 @@
   }
 
   .case__slider-before {
-    width: 280px;
     height: 512px;
-    background-image: url("../img/cat-before--tablet.png");
   }
 
   .case__slider-after {
-    width: 280px;
     height: 512px;
-    background-image: url("../img/cat-after--tablet.png");
   }
 }
 

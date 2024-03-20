@@ -1,4 +1,5 @@
 .additional {
+  position: relative;
   display: grid;
   margin: 0;
   padding: 0 20px 34px 20px;
@@ -9,11 +10,28 @@
   float: left;
   margin: 0 0 34px 0;
   padding: 0;
+  max-width: 141px;
   font-family: @title;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   color: @titular;
+
+  &::after {
+    position: absolute;
+    top: 16px;
+    left: 181px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-color: @elementary;
+  }
+}
+
+.additional__title-text {
+  position: relative;
+  display: block;
+  background-color: @back;
 }
 
 .additional__list {
@@ -74,10 +92,24 @@
   }
 
   .additional__title {
-    max-width: 1220px;
+    max-width: 291px;
     margin: 0 0 57px 0;
     font-size: 36px;
     line-height: 36px;
+    z-index: 1;
+
+    &::after {
+      top: 21px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      z-index: -1;
+    }
+  }
+
+  .additional__title-text {
+    left: -40px;
+    padding: 0 40px;
   }
 
   .additional__list {
@@ -109,8 +141,14 @@
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .additional {
-    grid-column: ~"1 / -1";
+    grid-column: ~"2 / -2";
     padding: 0 0 60px 0;
+  }
+
+  .additional__title {
+    &::after {
+      top: 22px;
+    }
   }
 
   .additional__list {

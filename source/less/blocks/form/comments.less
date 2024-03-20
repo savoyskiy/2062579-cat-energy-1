@@ -1,4 +1,5 @@
 .comments {
+  position: relative;
   display: grid;
   margin: 0;
   padding: 0 20px 23px 20px;
@@ -9,10 +10,27 @@
   float: left;
   margin: 0 0 38px 0;
   padding: 0;
+  max-width: 121px;
   font-family: @title;
   font-size: 24px;
   line-height: 26px;
   color: @titular;
+
+  &::after {
+    position: absolute;
+    top: 12px;
+    left: 161px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-color: @elementary;
+  }
+}
+
+.comments__title-text {
+  position: relative;
+  display: block;
+  background-color: @back;
 }
 
 .comments__textarea {
@@ -45,8 +63,23 @@
 
   .comments__title {
     margin: 0 0 87px 0;
+    max-width: 262px;
     font-size: 36px;
     line-height: 36px;
+    z-index: 1;
+
+    &::after {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      z-index: -1;
+    }
+  }
+
+  .comments__title-text {
+    left: -40px;
+    padding: 0 40px;
   }
 
   .comments__textarea {
@@ -63,13 +96,17 @@
 /*десктопный вид*/
 @media (min-width: @desktop) {
   .comments {
-    grid-column: ~"1 / -1";
+    grid-column: ~"2 / -2";
     max-width: 1220px;
     padding: 0 0 70px 0;
   }
 
   .comments__title {
     margin: 0 0 78px 0;
+
+    &::after {
+      top: 22px;
+    }
   }
 
   .comments__textarea {
