@@ -25,6 +25,11 @@
 
 .navigation__img {
   display: block;
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -134,6 +139,17 @@
     border-bottom: none;
   }
 
+  .navigation__img {
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+  }
+
   .navigation__list {
     position: relative;
     top: 0;
@@ -200,10 +216,16 @@
     width: 210px;
   }
 
-  /*.navigation__img {
-    width: 202px;
-    height: 59px;
-  }*/
+  .navigation__img {
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
+  }
 
   .navigation__list {
     flex-wrap: wrap;
