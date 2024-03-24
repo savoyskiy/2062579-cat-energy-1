@@ -57,6 +57,11 @@
         </div>
         <div class="main-header__image-wrapper">
           <picture>
+            <!--webp-->
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can.webp 1x, img/index-can@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
+            <!--png-->
             <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
             <img class="main-header__image" src="img/index-can-mobile.png" alt="Кошачий корм Cat Energy." width="280" height="270" srcset="img/index-can-mobile@2x.png 2x">
@@ -141,14 +146,22 @@
           <div class="case__slider-images">
             <div class="case__slider-before">
               <picture>
-                <source media="(min-width: 768px)" srcset="img/cat-before--tablet.png 1x, img/cat-before--tablet@2x.png 2x" width="560" height="512">
-                <img src="img/cat-before--mobile.png" srcset="img/cat-before--mobile@2x.png 2x" alt="толстый кот до диеты." width="280" height="256">
+                <!--webp-->
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-before--mid.webp 1x, img/cat-before--max.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/cat-before--min.webp 1x, img/cat-before--mid.webp 2x" width="280" height="256">
+                <!--png-->
+                <source media="(min-width: 768px)" srcset="img/cat-before--mid.png 1x, img/cat-before--max.png 2x" width="560" height="512">
+                <img src="img/cat-before--min.png" srcset="img/cat-before--mid.png 2x" alt="толстый кот до диеты." width="280" height="256">
               </picture>
             </div>
             <div class="case__slider-after">
               <picture>
-                <source media="(min-width: 768px)" srcset="img/cat-after--tablet.png 1x, img/cat-after--tablet@2x.png 2x" width="560" height="512">
-                <img src="img/cat-after--mobile.png" srcset="img/cat-after--mobile@2x.png 2x" alt="худой кот после диеты." width="280" height="256">
+                <!--webp-->
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-after--tablet.png 1x, img/cat-after--desktop.png 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/cat-after--mobile.webp 1x, img/cat-after--tablet.png 2x" width="280" height="256">
+                <!--png-->
+                <source media="(min-width: 768px)" srcset="img/cat-after--tablet.png 1x, img/cat-after--desktop.png 2x" width="560" height="512">
+                <img src="img/cat-after--mobile.png" srcset="img/cat-after--tablet.png 2x" alt="худой кот после диеты." width="280" height="256">
               </picture>
             </div>
 
