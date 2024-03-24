@@ -53,14 +53,18 @@
   justify-content: center;
   align-items: center;
 
-  &:hover path,
-  &:focus path {
+  &:hover .page-footer__social-icon,
+  &:focus .page-footer__social-icon {
     fill: @elementary;
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.page-footer__social-icon {
+  fill: @control;
 }
 
 .page-footer__producer {
@@ -76,8 +80,8 @@
   color: @textual;
   text-decoration: none;
 
-  &:hover path,
-  &:focus path {
+  &:hover .page-footer__producer-icon,
+  &:focus .page-footer__producer-icon {
     fill: @elementary;
   }
 
@@ -88,6 +92,7 @@
 
 .page-footer__producer-icon {
   flex-shrink: 0;
+  fill: @control;
 }
 
 /*планшетный вид*/
