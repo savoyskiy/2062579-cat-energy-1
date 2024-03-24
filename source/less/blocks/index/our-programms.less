@@ -66,20 +66,29 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  &::after {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -70%);
-    left: 100px;
-    content: url("../img/icon_arrow--mobile.svg");
-  }
+  &:hover .our-programms__link-icon {
+    &--hover {
+      display: block;
+    }
 
-  &:hover::after {
-    content: url("../img/icon_arrow--long.svg");
+    &--static {
+      display: none;
+    }
   }
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.our-programms__link-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -70%);
+  left: 100px;
+
+  &--hover {
+    display: none;
   }
 }
 
@@ -134,12 +143,16 @@
     line-height: 30px;
 
     &::after {
-      position: absolute;
       top: 50%;
       transform: translateY(-60%);
       left: 120px;
-      content: url("../img/icon_arrow--mobile.svg");
     }
+  }
+
+  .our-programms__link-icon {
+    top: 50%;
+    transform: translateY(-60%);
+    left: 120px;
   }
 }
 
