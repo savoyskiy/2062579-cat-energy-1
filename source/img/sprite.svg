@@ -106,4 +106,10 @@
       </clipPath>
     </defs>
   </symbol>
+
+  <!--кнопка слайдера "до/после"-->
+  <symbol class="case__symbol" viewBox="0 0 40 40" id="slider-control">
+    <path class="case__path" d="M16 11L8 20L16 29V11Z" />
+    <path class="case__path" d="M32 20L24 11V29L32 20Z" />
+  </symbol>
 </svg>
