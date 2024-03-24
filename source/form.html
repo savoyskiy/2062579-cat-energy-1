@@ -18,13 +18,16 @@
         <nav class="page-header__navigation navigation">
           <div class="navigation__logo-wrapper">
             <a class="navigation__logo" href="index.html">
-              <svg class="navigation__img navigation__img--desktop" width="202" height="59">
+              <svg class="navigation__img navigation__img--desktop" width="202" height="59" aria-labelledby="logo--desktop">
+                <title id="logo--desktop">логотип магазина Кэт Энерджи.</title>
                 <use xlink:href="img/sprite.svg#logo--desktop"></use>
               </svg>
-              <svg class="navigation__img navigation__img--tablet" width="174" height="50">
+              <svg class="navigation__img navigation__img--tablet" width="174" height="50" aria-labelledby="logo--tablet">
+                <title id="logo--tablet">логотип магазина Кэт Энерджи.</title>
                 <use xlink:href="img/sprite.svg#logo--tablet"></use>
               </svg>
-              <svg class="navigation__img navigation__img--mobile" width="190" height="38">
+              <svg class="navigation__img navigation__img--mobile" width="190" height="38" aria-labelledby="logo--mobile">
+                <title id="logo--mobile">логотип магазина Кэт Энерджи.</title>
                 <use xlink:href="img/sprite.svg#logo--mobile"></use>
               </svg>
             </a>
@@ -121,7 +124,7 @@
                 <label class="contacts-owner__label contacts-owner__label--email" for="email">
                   <span class="contacts-owner__type">E-mail:*</span>
                   <input class="contacts-owner__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="contacts-owner__type-icon" width="20" height="20">
+                  <svg class="contacts-owner__type-icon" width="20" height="20" aria-label="введите адрес вашей электронной почты.">
                     <use xlink:href="img/sprite.svg#icon-email"></use>
                   </svg>
                 </label>
@@ -130,7 +133,7 @@
                 <label class="contacts-owner__label contacts-owner__label--phone" for="phone">
                   <span class="contacts-owner__type">Телефон:*</span>
                   <input class="contacts-owner__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" pattern="8[0-9]{10}" required>
-                  <svg class="contacts-owner__type-icon" width="20" height="20">
+                  <svg class="contacts-owner__type-icon" width="20" height="20" aria-label="введите номер вашего телефона.">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
                   </svg>
                 </label>
@@ -159,7 +162,7 @@
                 <label class="additional__label" for="sweetener">
                   <input class="additional__input visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
                   <span class="additional__checkbox">
-                    <svg class="additional__checkbox-icon" width="19" height="15">
+                    <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
                       <use xlink:href="img/sprite.svg#check"></use>
                     </svg>
                   </span>
@@ -170,7 +173,7 @@
                 <label class="additional__label" for="water">
                   <input class="additional__input visually-hidden" type="checkbox" id="water" name="water">
                   <span class="additional__checkbox">
-                    <svg class="additional__checkbox-icon" width="19" height="15">
+                    <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
                       <use xlink:href="img/sprite.svg#check"></use>
                     </svg>
                   </span>
@@ -181,7 +184,7 @@
                 <label class="additional__label" for="milk">
                   <input class="additional__input visually-hidden" type="checkbox" id="milk" name="milk">
                   <span class="additional__checkbox">
-                    <svg class="additional__checkbox-icon" width="19" height="15">
+                    <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
                       <use xlink:href="img/sprite.svg#check"></use>
                     </svg>
                   </span>
@@ -192,7 +195,7 @@
                 <label class="additional__label" for="vitamins">
                   <input class="additional__input visually-hidden" type="checkbox" id="vitamins" name="vitamins">
                   <span class="additional__checkbox">
-                    <svg class="additional__checkbox-icon" width="19" height="15">
+                    <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
                       <use xlink:href="img/sprite.svg#check"></use>
                     </svg>
                   </span>
@@ -225,7 +228,8 @@
       </section>
 
       <div class="page-footer__container container">
-        <a class="page-footer__logo" href="#">
+        <a class="page-footer__logo" href="index.html">
+          <span class="visually-hidden">на главную страницу сайта Кэт Энерджи.</span>
           <svg width="128" height="24">
             <use xlink:href="img/sprite.svg#logo--footer"></use>
           </svg>
@@ -234,7 +238,7 @@
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <span class="visually-hidden">вконтакте</span>
+              <span class="visually-hidden">на страницу магазина вконтакте.</span>
               <svg class="page-footer__social-icon" width="28" height="22">
                 <use xlink:href="img/sprite.svg#logo--VK"></use>
               </svg>
@@ -242,7 +246,7 @@
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <span class="visually-hidden">youtube</span>
+              <span class="visually-hidden">на страницу магазина на youtube.</span>
               <svg class="page-footer__social-icon" width="28" height="22">
                 <use xlink:href="img/sprite.svg#logo--YT"></use>
               </svg>
@@ -250,7 +254,7 @@
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <span class="visually-hidden">телеграмм</span>
+              <span class="visually-hidden">в телеграмм-канал магазина.</span>
               <svg class="page-footer__social-icon" width="28" height="22">
                 <use xlink:href="img/sprite.svg#logo--TG"></use>
               </svg>
@@ -258,7 +262,7 @@
           </li>
         </ul>
 
-        <a class="page-footer__producer" href="">
+        <a class="page-footer__producer" href="https://htmlacademy.ru" aria-label="Сайт HTML Academy">
           <span class="page-footer__producer-name">HTML Academy</span>
           <svg class="page-footer__producer-icon" width="27" height="34">
             <use xlink:href="img/sprite.svg#logo--HTMLAcademy"></use>

@@ -18,13 +18,16 @@
         <nav class="page-header__navigation navigation">
           <div class="navigation__logo-wrapper">
             <a class="navigation__logo" href="index.html">
-              <svg class="navigation__img navigation__img--desktop" width="202" height="59">
+              <svg class="navigation__img navigation__img--desktop" width="202" height="59" aria-labelledby="logo--desktop">
+                <title id="logo--desktop">логотип магазина Кэт Энерджи.</title>
                 <use xlink:href="img/sprite.svg#logo--desktop"></use>
               </svg>
-              <svg class="navigation__img navigation__img--tablet" width="174" height="50">
+              <svg class="navigation__img navigation__img--tablet" width="174" height="50" aria-labelledby="logo--tablet">
+                <title id="logo--tablet">логотип магазина Кэт Энерджи.</title>
                 <use xlink:href="img/sprite.svg#logo--tablet"></use>
               </svg>
-              <svg class="navigation__img navigation__img--mobile" width="190" height="38">
+              <svg class="navigation__img navigation__img--mobile" width="190" height="38" aria-labelledby="logo--mobile">
+                <title id="logo--mobile">логотип магазина Кэт Энерджи.</title>
                 <use xlink:href="img/sprite.svg#logo--mobile"></use>
               </svg>
             </a>
@@ -287,7 +290,7 @@
         </ul>
 
         <div class="goods__order-gift order-gift">
-          <svg class="order-gift__icon" width="78" height="81">
+          <svg class="order-gift__icon" width="78" height="81" aria-label="закажи и получи подарок.">
             <use xlink:href="img/sprite.svg#gift"></use>
           </svg>
           <p class="order-gift__description">Закажите все<br>и получите чехол для кота в подарок!</p>
@@ -296,6 +299,7 @@
 
     </main>
 
+    <!--подвал сайта-->
     <footer class="page-footer">
       <section class="page-footer__invite invite">
         <div class="invite__container container">
@@ -308,7 +312,8 @@
       </section>
 
       <div class="page-footer__container container">
-        <a class="page-footer__logo" href="#">
+        <a class="page-footer__logo" href="index.html">
+          <span class="visually-hidden">на главную страницу сайта Кэт Энерджи.</span>
           <svg width="128" height="24">
             <use xlink:href="img/sprite.svg#logo--footer"></use>
           </svg>
@@ -317,7 +322,7 @@
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <span class="visually-hidden">вконтакте</span>
+              <span class="visually-hidden">на страницу магазина вконтакте.</span>
               <svg class="page-footer__social-icon" width="28" height="22">
                 <use xlink:href="img/sprite.svg#logo--VK"></use>
               </svg>
@@ -325,7 +330,7 @@
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <span class="visually-hidden">youtube</span>
+              <span class="visually-hidden">на страницу магазина на youtube.</span>
               <svg class="page-footer__social-icon" width="28" height="22">
                 <use xlink:href="img/sprite.svg#logo--YT"></use>
               </svg>
@@ -333,7 +338,7 @@
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <span class="visually-hidden">телеграмм</span>
+              <span class="visually-hidden">в телеграмм-канал магазина.</span>
               <svg class="page-footer__social-icon" width="28" height="22">
                 <use xlink:href="img/sprite.svg#logo--TG"></use>
               </svg>
@@ -341,7 +346,7 @@
           </li>
         </ul>
 
-        <a class="page-footer__producer" href="">
+        <a class="page-footer__producer" href="https://htmlacademy.ru" aria-label="Сайт HTML Academy">
           <span class="page-footer__producer-name">HTML Academy</span>
           <svg class="page-footer__producer-icon" width="27" height="34">
             <use xlink:href="img/sprite.svg#logo--HTMLAcademy"></use>
