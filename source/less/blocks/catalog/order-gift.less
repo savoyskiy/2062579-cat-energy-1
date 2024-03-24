@@ -9,14 +9,13 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bag_cat_green@2x.jpg");
   }
+}
 
-  &::before {
-    position: absolute;
-    top: 59px;
-    left: 50%;
-    transform: translate(-50%);
-    content: url("../img/icon_gift--mobile.svg");
-  }
+.order-gift__icon {
+  position: absolute;
+  top: 59px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .order-gift__description {
@@ -40,13 +39,14 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bag_cat_green--tablet@2x.jpg");
     }
+  }
 
-    &::before {
-      top: 50%;
-      transform: translateY(-50%);
-      left: 57px;
-      content: url("../img/icon_gift--desktop.svg");
-    }
+  .order-gift__icon {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 57px;
+    width: 80px;
+    height: 83px;
   }
 
   .order-gift__description {
@@ -63,13 +63,12 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bag_cat_green--desktop@2x.jpg");
     }
+  }
 
-    &::before {
-      top: 56px;
-      left: 50%;
-      transform: translate(-50%);
-      content: url("../img/icon_gift--desktop.svg");
-    }
+  .order-gift__icon {
+    top: 56px;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .order-gift__description {
