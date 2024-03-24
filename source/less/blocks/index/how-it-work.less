@@ -24,34 +24,12 @@
   min-height: 60px;
   padding: 0 0 0 80px;
   gap: 20px;
+}
 
-  &--leaf::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url("../img/icon-leaf--mobile.svg");
-  }
-
-  &--boil::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url("../img/icon-boil--mobile.svg");
-  }
-
-  &--cutlery::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url("../img/icon-cutlery--mobile.svg");
-  }
-
-  &--clock::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: url("../img/icon-clock--mobile.svg");
-  }
+.how-it-work__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .how-it-work__text {
@@ -87,26 +65,6 @@
     padding-left: 0;
     padding-top: 151px;
 
-    &--leaf::before {
-      top: 40px;
-      content: url("../img/icon-leaf--tablet.svg");
-    }
-
-    &--boil::before {
-      top: 40px;
-      content: url("../img/icon-boil--tablet.svg");
-    }
-
-    &--cutlery::before {
-      top: 40px;
-      content: url("../img/icon-cutlery--tablet.svg");
-    }
-
-    &--clock::before {
-      top: 40px;
-      content: url("../img/icon-clock--tablet.svg");
-    }
-
     &::after {
       counter-increment: item;
       content: counter(item) "";
@@ -118,6 +76,12 @@
       line-height: 280px;
       color: @back-grey;
     }
+  }
+
+  .how-it-work__icon {
+    top: 40px;
+    width: 80px;
+    height: 80px;
   }
 }
 
