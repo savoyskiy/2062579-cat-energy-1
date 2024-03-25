@@ -9,7 +9,7 @@
 .contacts-owner__title {
   margin: 0 0 35px 0;
   padding: 0;
-  max-width: 187px;
+  max-width: 182px;
   font-family: @title;
   font-size: 24px;
   line-height: 26px;
@@ -18,7 +18,7 @@
 
   &::after {
     position: absolute;
-    top: 40px;
+    top: 41px;
     left: 220px;
     right: 0;
     content: "";
@@ -75,6 +75,7 @@
 .contacts-owner__input {
   align-self: start;
   min-width: 0; // для минимальной ширины в ФайрФокс
+  height: 18px; // для Файрфокс
   padding: 13px 40px 12px 15px;
   border: 1px solid @input-border;
   font-family: @title;
@@ -180,6 +181,7 @@
   }
 
   .contacts-owner__input {
+    height: 30px; // для Файрфокс
     padding: 10px 40px 10px 20px;
     font-size: 20px;
     line-height: 30px;
