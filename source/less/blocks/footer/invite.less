@@ -8,11 +8,15 @@
   grid-template-columns: 1fr 1fr;
   padding: 26px 20px;
   min-height: 60px;
+
+  &--index {
+    background-color: @back;
+  }
 }
 
 .invite__title {
   margin: 0;
-  padding: 0 20px 0 0;
+  padding: 0 16px 0 0;
   font-family: @title;
   font-size: 16px;
   line-height: 20px;
@@ -96,6 +100,10 @@
     justify-content: center;
   }
 
+  .invite__title {
+    padding: 0;
+  }
+
   .invite__description {
     grid-row: ~"1 / -1";
     grid-column: ~"2 / -2";
@@ -105,7 +113,7 @@
     width: 405px;
     min-height: 78px;
     gap: 87px;
-    padding: 60px 80px;
+    padding: 62px 80px 60px 80px;
     background-color: @back;
   }
 

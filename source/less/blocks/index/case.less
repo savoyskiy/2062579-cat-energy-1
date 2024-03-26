@@ -46,11 +46,11 @@
 
 .case__term {
   position: relative;
-  bottom: 8px;
+  bottom: 9px;
   left: 50%;
   transform: translate(-50%);
   width: 81px;
-  padding: 0 10px;
+  padding: 0 4px;
   font-family: @text;
   font-size: 12px;
   line-height: 12px;
@@ -67,6 +67,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  text-transform: uppercase;
   color: @titular;
   border: 1px solid @divider--dark;
   border-radius: 3px;
@@ -74,7 +75,7 @@
 
 .case__costs {
   margin: 0;
-  padding: 34px 46px;
+  padding: 10px 46px 19px 46px;
   font-family: @title;
   font-size: 14px;
   line-height: 20px;
@@ -82,6 +83,10 @@
   text-transform: uppercase;
   text-align: center;
   color: @titular;
+}
+
+.case__costs-spacer {
+  display: none;
 }
 
 .case__slider {
@@ -101,7 +106,7 @@
 .case__slider-before {
   display: flex;
   justify-content: flex-start;
-  //width: 50%; - возможно, не нужен, оставить только в разметке?
+  width: 50%;
   height: 256px;
   overflow: hidden;
 }
@@ -109,7 +114,7 @@
 .case__slider-after {
   display: flex;
   justify-content: flex-end;
-  //width: 50%; - возможно, не нужен, оставить только в разметке?
+  width: 50%;
   height: 256px;
   overflow: hidden;
 }
@@ -118,7 +123,8 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  //left: 50%; - возможно, не нужен, оставить только в разметке?
+  left: 50%;
+  transform: translateX(-2px);
   width: 4px;
   padding: 0;
   border: none;
@@ -129,12 +135,10 @@
     background-color: @elementary;
   }
 
-  &:hover .case__path {
+  &:hover .slider-control__inner,
+  &:hover .slider-control__control-point {
     fill: @elementary;
-  }
-
-  &:hover .case__rect {
-    stroke: @elementary;
+    border-color: @elementary;
   }
 
   &:active {
@@ -142,18 +146,31 @@
     opacity: 0.6;
   }
 
-  &:active .case__path {
+  &:active .slider-control__inner,
+  &:active .slider-control__control-point {
     fill: @elementary--second;
-  }
-
-  &:active .case__rect {
-    stroke: @elementary--second;
+    border-color: @elementary--second;
   }
 }
 
-.case__control-point {
-  position: relative;
-  left: -18px;
+.slider-control__inner {
+  position: absolute;
+  top: center;
+  left: center;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid @control;
+  background-color: @back;
+}
+
+.slider-control__control-point {
+  position: absolute;
+  top: center;
+  left: center;
+  transform: translate(-50%, -2px);
+  fill: @control;
 }
 
 /*планшетный вид*/
@@ -166,7 +183,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content;
-    padding: 0 30px 250px 30px;
+    padding: 0 30px 241px 30px;
     background-color: @back;
   }
 
@@ -193,15 +210,16 @@
   .case__term {
     bottom: 8px;
     width: 125px;
-    padding: 0 8px;
+    padding: 0 7px;
     font-size: 14px;
     line-height: 14px;
     background-color: @back;
   }
 
   .case__definition {
-    padding: 15px 30px 20px 30px;
-    min-width: 100px;
+    display: block;
+    padding: 15px 29px 18px 29px;
+    width: 102px;
     font-size: 30px;
     line-height: 37px;
   }
@@ -209,9 +227,9 @@
   .case__costs {
     justify-self: right;
     max-width: 174px;
-    padding: 11px 0 0 0;
+    padding: 8px 0 0 0;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 28px;
     text-align: right;
   }
 
@@ -254,7 +272,7 @@
 
   .case__title {
     grid-column: ~"1 / -1";
-    padding: 0 110px 57px 110px;
+    padding: 0 110px 75px 110px;
     background-color: @back;
   }
 
@@ -266,6 +284,7 @@
   .case__description {
     padding: 70px 0 69px 0;
     min-height: 96px;
+    width: 433px;
   }
 
   .case__dates {
@@ -279,11 +298,23 @@
   .case__costs {
     justify-self: left;
     max-width: 327px;
-    padding: 60px 0 75px 0;
+    width: 327px;
+    padding: 43px 0 70px 0;
+    text-align: left;
+  }
+
+  .case__costs-spacer {
+    display: inline-block;
+    width: 61px;
   }
 
   .case__slider {
     justify-content: flex-start;
     padding: 0 0 0 50px;
+  }
+
+  .case__slider-images {
+    top: -220px;
+    margin: 0 0 -220px 0;
   }
 }

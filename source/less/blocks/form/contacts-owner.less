@@ -7,10 +7,9 @@
 }
 
 .contacts-owner__title {
-  float: left;
   margin: 0 0 35px 0;
   padding: 0;
-  max-width: 187px;
+  max-width: 182px;
   font-family: @title;
   font-size: 24px;
   line-height: 26px;
@@ -19,7 +18,7 @@
 
   &::after {
     position: absolute;
-    top: 40px;
+    top: 41px;
     left: 220px;
     right: 0;
     content: "";
@@ -76,6 +75,7 @@
 .contacts-owner__input {
   align-self: start;
   min-width: 0; // для минимальной ширины в ФайрФокс
+  height: 18px; // для Файрфокс
   padding: 13px 40px 12px 15px;
   border: 1px solid @input-border;
   font-family: @title;
@@ -90,7 +90,7 @@
     border: 2px solid @error;
   }
 
-  &:invalid + .contacts-owner__type-icon path {
+  &:invalid + .contacts-owner__type-icon {
     stroke: @error;
   }
 
@@ -99,7 +99,7 @@
     border: 1px solid @input-border;
   }
 
-  &:invalid:placeholder-shown + .contacts-owner__type-icon path {
+  &:invalid:placeholder-shown + .contacts-owner__type-icon {
     stroke: @titular;
   }
 
@@ -115,9 +115,14 @@
     outline: none;
   }
 
-  &:focus + .contacts-owner__type-icon path {
+  &:focus + .contacts-owner__type-icon {
     stroke: @elementary;
   }
+}
+
+.contacts-owner__input + .contacts-owner__type-icon {
+  fill: none;
+  stroke: @titular;
 }
 
 /*планшетный вид*/
@@ -130,13 +135,13 @@
   .contacts-owner__title {
     margin: 0;
     padding: 0 40px 76px 40px;
-    max-width: 612px;
+    max-width: 594px;
     font-size: 36px;
     line-height: 36px;
     z-index: 1;
 
     &::after {
-      top: 20px;
+      top: 22px;
       left: 50%;
       transform: translateX(-50%);
       width: 100vw;
@@ -176,7 +181,8 @@
   }
 
   .contacts-owner__input {
-    padding: 10px 40px 10px 15px;
+    height: 30px; // для Файрфокс
+    padding: 10px 40px 10px 20px;
     font-size: 20px;
     line-height: 30px;
 
@@ -186,7 +192,7 @@
     }
 
     &:invalid:placeholder-shown {
-      padding: 10px 40px 10px 15px;
+      padding: 10px 40px 10px 20px;
     }
 
     &:hover {
