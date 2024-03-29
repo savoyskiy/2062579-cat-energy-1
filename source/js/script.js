@@ -5,13 +5,7 @@ navList.classList.remove('navigation__list--no-js');
 navButton.classList.remove('navigation__button--no-js');
 
 navButton.addEventListener('click', function () {
-  if (navList.classList.contains('navigation__list--hidden')) {
-    navList.classList.remove('navigation__list--hidden');
-    navButton.classList.remove('navigation__button--close');
-    navButton.classList.add('navigation__button--open');
-  } else {
-    navList.classList.add('navigation__list--hidden');
-    navButton.classList.add('navigation__button--close');
-    navButton.classList.remove('navigation__button--open');
-  }
+  navList.classList.toggle('navigation__list--hidden');
+  navButton.classList.toggle('navigation__button--close');
+  navButton.classList.toggle('navigation__button--open');
 });
