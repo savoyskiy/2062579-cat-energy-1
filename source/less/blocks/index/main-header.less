@@ -7,13 +7,13 @@
 
 .main-header__title-wrapper {
   background-color: @elementary--dark;
-  background-image: url("../img/index-background-cat-green.jpg");
+  background-image: image-set(url("../img/index-background-cat-green.webp"), url("../img/index-background-cat-green.jpg"));
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/index-background-cat-green--2x.jpg");
+    background-image: image-set(url("../img/index-background-cat-green--2x.webp"), url("../img/index-background-cat-green--2x.jpg"));
   }
 }
 
@@ -55,6 +55,8 @@
   width: 280px;
   margin: 0 auto;
   color: @back;
+  text-align: center;
+  text-decoration: none;
   background-color: @elementary;
 
   &:hover {
@@ -115,7 +117,7 @@
   }
 
   .main-header__button {
-    width: 244px;
+    width: 192px;
     padding: 14px 26px;
     margin: 0;
     font-size: 20px;
