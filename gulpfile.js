@@ -53,7 +53,7 @@ const optimiseImages = () => {
 }
 
 const copyImages = () => {
-  return gulp.src(['source/img/**/*.{jpg,png}', 'source/img/sprite-or.svg'])
+  return gulp.src(['source/img/**/*.{jpg,png}', 'source/img/sprite-handmade.svg'])
     .pipe(gulp.dest('build/img'));
 }
 
@@ -70,7 +70,7 @@ const createWebp = () => {
 // Svg
 
 const svgoptimise = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/sprite-or.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/sprite-handmade.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
@@ -88,7 +88,7 @@ export const sprite = () => {
 // Copy
 
 export const copy = (done) => {
-  return gulp.src(['source/fonts/**/*.{woff,woff2}', 'source/*.ico', 'source/*.webmanifest', '!source/img/sprite-or.svg'], { base: 'source' })
+  return gulp.src(['source/fonts/**/*.{woff,woff2}', 'source/*.ico', 'source/*.webmanifest'], { base: 'source' })
     .pipe(gulp.dest('build'));
   done();
 }
