@@ -76,6 +76,7 @@
           <ul class="our-programms__list">
             <li class="our-programms__item">
               <h3 class="our-programms__title our-programms__title--slim">похудение</h3>
+              <!--иконка ниже обрезается в ФФ (нормально работает, если подключить в разметку)-->
               <svg class="our-programms__icon our-programms__icon--slim" width="50" height="53" aria-label="каталог кормов для похудения.">
                 <use xlink:href="img/svg/sprite.svg#cat-slim"></use>
               </svg>
@@ -114,6 +115,7 @@
 
           <ol class="how-it-work__list">
             <li class="how-it-work__item how-it-work__item--leaf">
+              <!--иконка ниже обрезается в ФФ (нормально работает, если подключить в разметку)-->
               <svg class="how-it-work__icon how-it-work__icon--leaf" width="60" height="60" aria-label="полезное питание.">
                 <use xlink:href="img/svg/sprite.svg#leaf"></use>
               </svg>
@@ -221,7 +223,11 @@
       <div class="page-footer__container container">
         <a class="page-footer__logo" href="index.html">
           <span class="visually-hidden">на главную страницу сайта Кэт Энерджи.</span>
-          <img src="img/svg/logo-footer.svg" alt="логотип магазина Кэт Энерджи." width="128" height="24">
+          <!--<img src="img/svg/logo-footer.svg" alt="логотип магазина Кэт Энерджи." width="128" height="24">-->
+          <!--код ниже не работает в ФФ (работает, если подключить через <img>)-->
+          <svg width="128" height="24">
+            <use xlink:href="img/svg/sprite.svg#logo-footer"></use>
+          </svg>
         </a>
 
         <ul class="page-footer__social-list">
@@ -253,8 +259,9 @@
 
         <a class="page-footer__producer" href="https://htmlacademy.ru" aria-label="Сайт HTML Academy">
           <span class="page-footer__producer-name">HTML Academy</span>
+          <!--иконка ниже не работает в ФФ из автоматизированного спрайта, но работает из ручного и при подключении в разметку-->
           <svg class="page-footer__producer-icon" width="27" height="34">
-            <use xlink:href="img/sprite-handmade.svg#logo--HTMLAcademy"></use>
+            <use xlink:href="img/svg/sprite.svg#logo--HTMLAcademy"></use>
           </svg>
         </a>
       </div>
