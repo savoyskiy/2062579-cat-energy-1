@@ -42,6 +42,17 @@
   border: none;
   width: 100%;
   min-height: 362px;
+  background-size: cover;
+  background-image: image-set(url("../img/map.webp"), url("../img/map.jpg"));
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(url("../img/map@2x.webp"), url("../img/map@2x.jpg"));
+  }
+}
+
+.invite__custom-map {
+  width: 100%;
+  height: 100%;
 
   &--tablet,
   &--desktop {
@@ -90,7 +101,14 @@
     width: 100%;
     min-height: 400px;
     justify-self: center;
+    background-image: image-set(url("../img/map--tablet.webp"), url("../img/map--tablet.jpg"));
 
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(url("../img/map--tablet@2x.webp"), url("../img/map--tablet@2x.jpg"));
+    }
+  }
+
+  .invite__custom-map {
     &--tablet {
       display: block;
     }
@@ -140,8 +158,14 @@
     grid-column: ~"1 / -1";
     align-self: stretch;
     width: 100vw;
-    min-height: 400px;
+    background-image: image-set(url("../img/map--desktop.webp"), url("../img/map--desktop.jpg"));
 
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(url("../img/map--desktop@2x.webp"), url("../img/map--desktop@2x.jpg"));
+    }
+  }
+
+  .invite__custom-map {
     &--desktop {
       display: block;
     }
