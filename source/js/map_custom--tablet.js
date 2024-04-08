@@ -10,7 +10,7 @@ ymaps.ready(function () {
           hintContent: 'Собственный значок метки',
           balloonContent: '',
       }, {
-          // Опции.
+          // Опции:
           // Необходимо указать данный тип макета.
           iconLayout: 'default#image',
           // Своё изображение иконки метки.
@@ -18,7 +18,7 @@ ymaps.ready(function () {
           // Размеры метки.
           iconImageSize: [113, 106],
           // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
-          iconImageOffset: [50, -50]
+          iconImageOffset: [-51, -54]
       });
 
   myMap.geoObjects
