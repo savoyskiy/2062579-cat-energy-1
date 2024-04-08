@@ -219,7 +219,11 @@
             <h2 class="invite__title">приглашаем <br>к сотрудничеству дилеров!</h2>
             <address class="invite__address">ул. Большая Конюшенная, д. 19/8<br><br class="invite__additional-brake">Санкт-Петербург</address>
           </div>
-          <iframe class="invite__map" title="Карта расположения компании Cat Energy." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8600.904867167967!2d30.310846219801366!3d59.94008662313794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1707726178806!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="invite__map">
+            <div class="invite__custom-map invite__custom-map--mobile" id="map"></div>
+            <div class="invite__custom-map invite__custom-map--tablet" id="map--table"></div>
+            <div class="invite__custom-map invite__custom-map--desktop" id="map--desktop"></div>
+          </div>
         </div>
       </section>
 
@@ -269,5 +273,10 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <!--карта-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=f468d2c2-624f-4419-94c9-489802a1df65"></script>
+    <script src="js/map_custom.js" loading="lazy"></script>
+    <script src="js/map_custom--tablet.js"></script>
+    <script src="js/map_custom--desktop.js"></script>
   </body>
 </html>
