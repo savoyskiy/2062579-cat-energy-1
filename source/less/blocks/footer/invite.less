@@ -42,6 +42,11 @@
   border: none;
   width: 100%;
   min-height: 362px;
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
 }
 
 .index-main__invite {
@@ -85,6 +90,15 @@
     width: 100%;
     min-height: 400px;
     justify-self: center;
+
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
   }
 }
 
@@ -127,5 +141,14 @@
     align-self: stretch;
     width: 100vw;
     min-height: 400px;
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
   }
 }
