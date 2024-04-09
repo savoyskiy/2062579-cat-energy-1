@@ -47,7 +47,7 @@
   text-transform: uppercase;
   color: @textual;
 
-  &:invalid {
+  &:invalid[required] {
     padding: 12px 14px 11px 14px;
     border: 2px solid @error;
   }
@@ -97,8 +97,8 @@
     font-size: 20px;
     line-height: 30px;
 
-    &:invalid {
-      padding: 9px 19px;
+    &:invalid[required] {
+      padding: 9px 20px;
     }
 
     &:invalid:placeholder-shown {
