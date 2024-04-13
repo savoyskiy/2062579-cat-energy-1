@@ -158,7 +158,7 @@
 
   .goods__button {
     grid-column: ~"1 / -1";
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -211,11 +211,17 @@
   }
 
   .goods__description-list {
+    grid-template-columns: 5fr 1fr;
     padding: 10px 0;
   }
 
   .goods-description__term {
     justify-self: auto;
+  }
+
+  .goods-description__definition {
+    padding-left: 5px;
+    justify-self: left;
   }
 
   .goods__button {
