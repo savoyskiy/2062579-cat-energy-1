@@ -50,165 +50,165 @@
 
     <!--основной раздел-->
     <main class="form-main">
-        <h1 class="form-main__title container">Подбор программы</h1>
-        <p class="form-main__description container">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+      <h1 class="form-main__title container">Подбор программы</h1>
+      <p class="form-main__description container">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
 
-        <form class="form-main__programm programm" action="https://echo.htmlacademy.ru/" method="post">
-          <!--данные кота-->
-          <fieldset class="programm__cat-date cat-date">
-            <legend class="visually-hidden">Данные кота</legend>
-            <h2 class="visually-hidden cat-date__title">Данные кота</h2>
-            <ul class="cat-date__list">
-              <li class="cat-date__item">
-                <label class="cat-date__label" for="name-cat">
-                  <span class="cat-date__parameter">Имя:*</span>
-                  <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
-                </label>
-              </li>
-              <li class="cat-date__item">
-                <label class="cat-date__label" for="weight-cat">
-                  <span class="cat-date__parameter">Вес (кг):*</span>
-                  <input class="cat-date__input" type="text" id="weight-cat" name="weight-cat" placeholder="7" required>
-                </label>
-              </li>
-              <li class="cat-date__item">
-                <label class="cat-date__label" for="age-cat">
-                  <span class="cat-date__parameter">Возраст (лет):</span>
-                  <input class="cat-date__input" type="text" id="age-cat" name="age-cat" placeholder="7">
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+      <form class="form-main__programm programm" action="https://echo.htmlacademy.ru/" method="post">
+        <!--данные кота-->
+        <fieldset class="programm__cat-date cat-date">
+          <legend class="visually-hidden">Данные кота</legend>
+          <h2 class="visually-hidden cat-date__title">Данные кота</h2>
+          <ul class="cat-date__list">
+            <li class="cat-date__item">
+              <label class="cat-date__label" for="name-cat">
+                <span class="cat-date__parameter">Имя:*</span>
+                <input class="cat-date__input" type="text" id="name-cat" name="name-cat" placeholder="барсик" required>
+              </label>
+            </li>
+            <li class="cat-date__item">
+              <label class="cat-date__label" for="weight-cat">
+                <span class="cat-date__parameter">Вес (кг):*</span>
+                <input class="cat-date__input" type="text" id="weight-cat" name="weight-cat" placeholder="7" required>
+              </label>
+            </li>
+            <li class="cat-date__item">
+              <label class="cat-date__label" for="age-cat">
+                <span class="cat-date__parameter">Возраст (лет):</span>
+                <input class="cat-date__input" type="text" id="age-cat" name="age-cat" placeholder="7">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
-          <!--тип программы-->
-          <fieldset class="programm__programm-type programm-type">
-            <legend class="visually-hidden">Тип программы</legend>
-            <h2 class="visually-hidden programm-type__title">Тип программы</h2>
-            <ul class="programm-type__list">
-              <li class="programm-type__item">
-                <label class="programm-type__label" for="slim">
-                  <input class="programm-type__input visually-hidden" type="radio" id="slim" name="programm-type" value="slim" checked>
-                  <span class="programm-type__radio"></span>
-                  <span class="programm-type__text">похудение</span>
-                </label>
-              </li>
-              <li class="programm-type__item">
-                <label class="programm-type__label" for="pro">
-                  <input class="programm-type__input visually-hidden" type="radio" id="pro" name="programm-type" value="pro">
-                  <span class="programm-type__radio"></span>
-                  <span class="programm-type__text">набор массы</span>
-                </label>
-              </li>
-              <li class="programm-type__item">
-                <label class="programm-type__label" for="help">
-                  <input class="programm-type__input visually-hidden" type="radio" id="help" name="programm-type" value="help">
-                  <span class="programm-type__radio"></span>
-                  <span class="programm-type__text">не знаю (нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+        <!--тип программы-->
+        <fieldset class="programm__programm-type programm-type">
+          <legend class="visually-hidden">Тип программы</legend>
+          <h2 class="visually-hidden programm-type__title">Тип программы</h2>
+          <ul class="programm-type__list">
+            <li class="programm-type__item">
+              <label class="programm-type__label" for="slim">
+                <input class="programm-type__input visually-hidden" type="radio" id="slim" name="programm-type" value="slim" checked>
+                <span class="programm-type__radio"></span>
+                <span class="programm-type__text">похудение</span>
+              </label>
+            </li>
+            <li class="programm-type__item">
+              <label class="programm-type__label" for="pro">
+                <input class="programm-type__input visually-hidden" type="radio" id="pro" name="programm-type" value="pro">
+                <span class="programm-type__radio"></span>
+                <span class="programm-type__text">набор массы</span>
+              </label>
+            </li>
+            <li class="programm-type__item">
+              <label class="programm-type__label" for="help">
+                <input class="programm-type__input visually-hidden" type="radio" id="help" name="programm-type" value="help">
+                <span class="programm-type__radio"></span>
+                <span class="programm-type__text">не знаю (нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
-          <!--контакты владельца-->
-          <fieldset class="programm__contacts-owner contacts-owner">
-            <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
-            <h2 class="contacts-owner__title">
-              <span class="contacts-owner__title-text">Контактные данные (владельца кота)</span>
-            </h2>
-            <ul class="contacts-owner__list">
-              <li class="contacts-owner__item">
-                <label class="contacts-owner__label contacts-owner__label--email" for="email">
-                  <span class="contacts-owner__type">E-mail:*</span>
-                  <input class="contacts-owner__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="contacts-owner__type-icon" width="20" height="20" aria-label="введите адрес вашей электронной почты.">
-                    <use xlink:href="img/svg/sprite.svg#icon-email"></use>
+        <!--контакты владельца-->
+        <fieldset class="programm__contacts-owner contacts-owner">
+          <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
+          <h2 class="contacts-owner__title">
+            <span class="contacts-owner__title-text">Контактные данные (владельца кота)</span>
+          </h2>
+          <ul class="contacts-owner__list">
+            <li class="contacts-owner__item">
+              <label class="contacts-owner__label contacts-owner__label--email" for="email">
+                <span class="contacts-owner__type">E-mail:*</span>
+                <input class="contacts-owner__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <svg class="contacts-owner__type-icon" width="20" height="20" aria-label="введите адрес вашей электронной почты.">
+                  <use xlink:href="img/svg/sprite.svg#icon-email"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="contacts-owner__item">
+              <label class="contacts-owner__label contacts-owner__label--phone" for="phone">
+                <span class="contacts-owner__type">Телефон:*</span>
+                <input class="contacts-owner__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" pattern="8[0-9]{10}" required>
+                <svg class="contacts-owner__type-icon" width="20" height="20" aria-label="введите номер вашего телефона.">
+                  <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
+                </svg>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <!--комментарий-->
+        <fieldset class="programm__comments comments">
+          <legend class="visually-hidden">Комментарий</legend>
+          <h2 class="comments__title">
+            <span class="comments__title-text">Комментарий</span>
+          </h2>
+
+          <textarea class="comments__textarea" name="comments" id="comments" cols="25" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+
+        <!--дополнительно-->
+        <fieldset class="programm__additional additional">
+          <legend class="visually-hidden">Дополнительно</legend>
+          <h2 class="additional__title">
+            <span class="additional__title-text">Дополнительно</span>
+          </h2>
+          <ul class="additional__list">
+            <li class="additional__item">
+              <label class="additional__label" for="sweetener">
+                <input class="additional__input visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
+                <span class="additional__checkbox">
+                  <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
+                    <use xlink:href="img/svg/sprite.svg#check"></use>
                   </svg>
-                </label>
-              </li>
-              <li class="contacts-owner__item">
-                <label class="contacts-owner__label contacts-owner__label--phone" for="phone">
-                  <span class="contacts-owner__type">Телефон:*</span>
-                  <input class="contacts-owner__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" pattern="8[0-9]{10}" required>
-                  <svg class="contacts-owner__type-icon" width="20" height="20" aria-label="введите номер вашего телефона.">
-                    <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
+                </span>
+                <span class="additional__text">сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="additional__item">
+              <label class="additional__label" for="water">
+                <input class="additional__input visually-hidden" type="checkbox" id="water" name="water">
+                <span class="additional__checkbox">
+                  <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
+                    <use xlink:href="img/svg/sprite.svg#check"></use>
                   </svg>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+                </span>
+                <span class="additional__text">питьевая вода</span>
+              </label>
+            </li>
+            <li class="additional__item">
+              <label class="additional__label" for="milk">
+                <input class="additional__input visually-hidden" type="checkbox" id="milk" name="milk">
+                <span class="additional__checkbox">
+                  <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
+                    <use xlink:href="img/svg/sprite.svg#check"></use>
+                  </svg>
+                </span>
+                <span class="additional__text">молоко</span>
+              </label>
+            </li>
+            <li class="additional__item">
+              <label class="additional__label" for="vitamins">
+                <input class="additional__input visually-hidden" type="checkbox" id="vitamins" name="vitamins">
+                <span class="additional__checkbox">
+                  <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
+                    <use xlink:href="img/svg/sprite.svg#check"></use>
+                  </svg>
+                </span>
+                <span class="additional__text">витамины</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
-          <!--комментарий-->
-          <fieldset class="programm__comments comments">
-            <legend class="visually-hidden">Комментарий</legend>
-            <h2 class="comments__title">
-              <span class="comments__title-text">Комментарий</span>
-            </h2>
+        <div class="programm__button-wrapper">
+          <button class="programm__button button">
+            <span class="programm__button-text">отправить заявку</span>
+          </button>
+          <p class="programm__note">* — Обязательные поля</p>
+        </div>
 
-            <textarea class="comments__textarea" name="comments" id="comments" cols="25" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
-
-          <!--дополнительно-->
-          <fieldset class="programm__additional additional">
-            <legend class="visually-hidden">Дополнительно</legend>
-            <h2 class="additional__title">
-              <span class="additional__title-text">Дополнительно</span>
-            </h2>
-            <ul class="additional__list">
-              <li class="additional__item">
-                <label class="additional__label" for="sweetener">
-                  <input class="additional__input visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
-                  <span class="additional__checkbox">
-                    <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
-                      <use xlink:href="img/svg/sprite.svg#check"></use>
-                    </svg>
-                  </span>
-                  <span class="additional__text">сахарозаменитель</span>
-                </label>
-              </li>
-              <li class="additional__item">
-                <label class="additional__label" for="water">
-                  <input class="additional__input visually-hidden" type="checkbox" id="water" name="water">
-                  <span class="additional__checkbox">
-                    <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
-                      <use xlink:href="img/svg/sprite.svg#check"></use>
-                    </svg>
-                  </span>
-                  <span class="additional__text">питьевая вода</span>
-                </label>
-              </li>
-              <li class="additional__item">
-                <label class="additional__label" for="milk">
-                  <input class="additional__input visually-hidden" type="checkbox" id="milk" name="milk">
-                  <span class="additional__checkbox">
-                    <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
-                      <use xlink:href="img/svg/sprite.svg#check"></use>
-                    </svg>
-                  </span>
-                  <span class="additional__text">молоко</span>
-                </label>
-              </li>
-              <li class="additional__item">
-                <label class="additional__label" for="vitamins">
-                  <input class="additional__input visually-hidden" type="checkbox" id="vitamins" name="vitamins">
-                  <span class="additional__checkbox">
-                    <svg class="additional__checkbox-icon" width="19" height="15" aria-label="выбор чекбокса." focusable="false">
-                      <use xlink:href="img/svg/sprite.svg#check"></use>
-                    </svg>
-                  </span>
-                  <span class="additional__text">витамины</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <div class="programm__button-wrapper">
-            <button class="programm__button button">
-              <span class="programm__button-text">отправить заявку</span>
-            </button>
-            <p class="programm__note">* — Обязательные поля</p>
-          </div>
-
-        </form>
+      </form>
     </main>
 
     <!--подвал сайта-->
