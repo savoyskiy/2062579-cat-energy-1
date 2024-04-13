@@ -41,6 +41,10 @@
   border-radius: 50%;
 }
 
+.programm-type__input:focus + .programm-type__radio {
+  border: 2px solid @titular;
+}
+
 .programm-type__input:checked + .programm-type__radio {
   &::before {
     position: absolute;
@@ -70,7 +74,7 @@
   }
 
   .programm-type__list {
-    padding: 24px 27px;
+    padding: 23px 27px 24px 26px;
     border: 1px solid @back-grey;
   }
 
